@@ -7,11 +7,28 @@ let currentFamily = 'all';
 let showPareto = true;
 let showCitations = false;
 
+// Brand colors for providers
+const PROVIDER_COLORS = {
+    'OpenAI': { bg: 'rgba(16, 163, 127, 0.7)', border: 'rgba(16, 163, 127, 1)' },      // OpenAI green
+    'Anthropic': { bg: 'rgba(204, 85, 51, 0.7)', border: 'rgba(204, 85, 51, 1)' },     // Anthropic orange
+    'Google': { bg: 'rgba(66, 133, 244, 0.7)', border: 'rgba(66, 133, 244, 1)' },      // Google blue
+    'Meta': { bg: 'rgba(0, 102, 255, 0.7)', border: 'rgba(0, 102, 255, 1)' },          // Meta blue
+    'xAI': { bg: 'rgba(0, 0, 0, 0.7)', border: 'rgba(0, 0, 0, 1)' },                   // xAI black
+    'Mistral': { bg: 'rgba(255, 122, 0, 0.7)', border: 'rgba(255, 122, 0, 1)' },       // Mistral orange
+    'default': { bg: 'rgba(107, 114, 128, 0.7)', border: 'rgba(107, 114, 128, 1)' }    // Gray fallback
+};
+
+// Get color for a provider
+function getProviderColor(provider) {
+    return PROVIDER_COLORS[provider] || PROVIDER_COLORS['default'];
+}
+
 // Initialize app when DOM is loaded
 document.addEventListener('DOMContentLoaded', async () => {
     await loadData();
     initControls();
     renderChart();
+    renderDataTable();
 });
 
 // Load data from JSON file
@@ -38,16 +55,19 @@ function initControls() {
     document.getElementById('benchmark-select').addEventListener('change', (e) => {
         currentBenchmark = e.target.value;
         renderChart();
+        renderDataTable();
     });
 
     document.getElementById('xaxis-select').addEventListener('change', (e) => {
         currentXAxis = e.target.value;
         renderChart();
+        renderDataTable();
     });
 
     document.getElementById('family-filter').addEventListener('change', (e) => {
         currentFamily = e.target.value;
         renderChart();
+        renderDataTable();
     });
 
     document.getElementById('show-pareto').addEventListener('change', (e) => {
@@ -151,18 +171,29 @@ function renderChart() {
         frontierPoints = calculateParetoFrontier(dataPoints);
     }
 
-    // Prepare datasets
-    const datasets = [
-        {
-            label: 'Models',
-            data: dataPoints,
-            backgroundColor: 'rgba(59, 130, 246, 0.6)',
-            borderColor: 'rgba(59, 130, 246, 1)',
+    // Group data points by provider for color coding
+    const pointsByProvider = {};
+    dataPoints.forEach(point => {
+        const provider = point.model.provider;
+        if (!pointsByProvider[provider]) {
+            pointsByProvider[provider] = [];
+        }
+        pointsByProvider[provider].push(point);
+    });
+
+    // Create datasets - one per provider for color coding
+    const datasets = Object.entries(pointsByProvider).map(([provider, points]) => {
+        const color = getProviderColor(provider);
+        return {
+            label: provider,
+            data: points,
+            backgroundColor: color.bg,
+            borderColor: color.border,
             borderWidth: 2,
             pointRadius: 6,
             pointHoverRadius: 8
-        }
-    ];
+        };
+    });
 
     // Add Pareto frontier line
     if (showPareto && frontierPoints.length > 0) {
@@ -205,8 +236,7 @@ function renderChart() {
                     font: { size: 18 }
                 },
                 legend: {
-                    display: true,
-                    position: 'top'
+                    display: false  // Hide legend - using data table instead
                 },
                 tooltip: {
                     callbacks: {
@@ -306,4 +336,84 @@ function showCitationPanel(model) {
 
     content.innerHTML = html;
     panel.style.display = 'block';
+}
+
+// Render data table/cards showing all models
+function renderDataTable() {
+    const container = document.getElementById('models-table');
+    if (!container) return;
+
+    // Get filtered models (same as chart)
+    const dataPoints = prepareDataPoints();
+
+    if (dataPoints.length === 0) {
+        container.innerHTML = '<p class="no-data">No models match the current filters.</p>';
+        return;
+    }
+
+    // Sort by current benchmark score (descending)
+    const sortedPoints = [...dataPoints].sort((a, b) => b.y - a.y);
+
+    // Generate cards HTML
+    let html = '<div class="model-cards-grid">';
+
+    sortedPoints.forEach(point => {
+        const model = point.model;
+        const color = getProviderColor(model.provider);
+        const benchScore = model.benchmarks[currentBenchmark]?.score;
+
+        html += `
+            <div class="model-card" style="border-left: 4px solid ${color.border}">
+                <div class="model-card-header">
+                    <h3 class="model-name">${model.name}</h3>
+                    <span class="model-provider" style="background-color: ${color.bg}; border-color: ${color.border}">
+                        ${model.provider}
+                    </span>
+                </div>
+
+                <div class="model-card-stats">
+                    <div class="stat">
+                        <span class="stat-label">Parameters</span>
+                        <span class="stat-value">${model.parameters_billions || '?'}B</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">${getBenchmarkLabel(currentBenchmark)}</span>
+                        <span class="stat-value">${benchScore ? benchScore.toFixed(1) : 'N/A'}</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Avg Cost/1M</span>
+                        <span class="stat-value">
+                            ${model.pricing
+                                ? '$' + ((model.pricing.input_per_1m_tokens + model.pricing.output_per_1m_tokens) / 2).toFixed(2)
+                                : 'N/A'}
+                        </span>
+                    </div>
+                </div>
+
+                <div class="model-card-benchmarks">
+                    ${Object.entries(model.benchmarks || {})
+                        .map(([bench, data]) => `
+                            <div class="benchmark-chip">
+                                <span class="bench-name">${bench.toUpperCase()}</span>
+                                <span class="bench-score">${data.score.toFixed(1)}</span>
+                            </div>
+                        `)
+                        .join('')}
+                </div>
+
+                ${showCitations ? `
+                    <div class="model-card-citations">
+                        ${model.benchmarks[currentBenchmark]?.source
+                            ? `<a href="${model.benchmarks[currentBenchmark].source.url}" target="_blank" class="citation-link">
+                                📄 ${model.benchmarks[currentBenchmark].source.type} source
+                               </a>`
+                            : ''}
+                    </div>
+                ` : ''}
+            </div>
+        `;
+    });
+
+    html += '</div>';
+    container.innerHTML = html;
 }
