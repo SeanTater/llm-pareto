@@ -1,0 +1,15 @@
+[project]
+name = "llm-pareto"
+version = "0.1.0"
+description = "LLM Pareto frontier visualization with automated data collection"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.31.0",
+    "pydantic>=2.0.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=7.0.0",
+]

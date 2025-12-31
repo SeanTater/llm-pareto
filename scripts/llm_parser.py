@@ -7,7 +7,22 @@ import subprocess
 import json
 import re
 import requests
-from typing import Dict, Any, Optional
+from typing import Dict, Any, Optional, List
+from pydantic import BaseModel
+
+
+class PricingModel(BaseModel):
+    """Schema for a single model's pricing"""
+    model_id: str
+    model_name: str
+    input_per_1m_tokens: float
+    output_per_1m_tokens: float
+    notes: str = ""
+
+
+class PricingResponse(BaseModel):
+    """Schema for list of pricing models"""
+    models: List[PricingModel]
 
 
 class LLMParser:
@@ -26,13 +41,14 @@ class LLMParser:
         self.backend = backend
         self.ollama_url = ollama_url
 
-    def parse(self, prompt: str, max_retries: int = 2) -> Dict[str, Any]:
+    def parse(self, prompt: str, max_retries: int = 2, schema: Optional[type[BaseModel]] = None) -> Dict[str, Any]:
         """
         Parse with LLM and return structured JSON
 
         Args:
             prompt: Prompt to send to LLM
             max_retries: Number of retries if parsing fails
+            schema: Optional Pydantic model to constrain output format
 
         Returns:
             Parsed JSON data
@@ -43,7 +59,7 @@ class LLMParser:
         for attempt in range(max_retries):
             try:
                 if self.backend == "ollama":
-                    response = self._call_ollama(prompt)
+                    response = self._call_ollama(prompt, schema)
                 elif self.backend == "claude":
                     response = self._call_claude(prompt)
                 else:
@@ -51,6 +67,12 @@ class LLMParser:
 
                 # Extract JSON from response
                 data = self._extract_json(response)
+
+                # Validate against schema if provided
+                if schema and self.backend == "ollama":
+                    validated = schema.model_validate(data)
+                    return validated.model_dump()
+
                 return data
 
             except json.JSONDecodeError as e:
@@ -61,16 +83,25 @@ class LLMParser:
 
         raise LLMParseError("Max retries exceeded")
 
-    def _call_ollama(self, prompt: str) -> str:
-        """Call Ollama API"""
+    def _call_ollama(self, prompt: str, schema: Optional[type[BaseModel]] = None) -> str:
+        """Call Ollama API with optional Pydantic schema constraint"""
         try:
+            # Prepare request body
+            body = {
+                "model": self.model,
+                "prompt": prompt,
+                "stream": False
+            }
+
+            # Add schema if provided, otherwise just request JSON
+            if schema:
+                body["format"] = schema.model_json_schema()
+            else:
+                body["format"] = "json"
+
             response = requests.post(
                 f"{self.ollama_url}/api/generate",
-                json={
-                    "model": self.model,
-                    "prompt": prompt,
-                    "stream": False
-                },
+                json=body,
                 timeout=120  # Longer timeout for GPU
             )
             response.raise_for_status()
@@ -145,37 +176,34 @@ def create_pricing_prompt(html: str, provider: str) -> str:
     Returns:
         Formatted prompt for LLM
     """
-    # Truncate HTML if too long (keep first 15k chars)
-    if len(html) > 15000:
-        html = html[:15000] + "\n... [truncated]"
+    # Truncate HTML if too long (keep first 50k chars for better coverage)
+    if len(html) > 50000:
+        html = html[:50000] + "\n... [truncated]"
 
-    prompt = f"""YOU ARE A DATA EXTRACTION TOOL. Your ONLY job is to extract pricing information and return JSON. Do NOT explain, describe, or comment.
+    prompt = f"""Extract pricing for ALL {provider} language models from the HTML below.
 
-TASK: Extract pricing for ALL {provider} language models from the HTML below.
-
-OUTPUT FORMAT (return ONLY this, nothing else):
-[
-  {{
-    "model_id": "gpt-4o",
-    "model_name": "GPT-4o",
-    "input_per_1m_tokens": 5.00,
-    "output_per_1m_tokens": 15.00,
-    "notes": ""
-  }}
-]
+Return a JSON object with this exact structure:
+{{
+  "models": [
+    {{
+      "model_id": "gpt-4o",
+      "model_name": "GPT-4o",
+      "input_per_1m_tokens": 5.00,
+      "output_per_1m_tokens": 15.00,
+      "notes": ""
+    }}
+  ]
+}}
 
 RULES:
 1. Convert all prices to dollars per 1 million tokens
 2. Use lowercase-with-hyphens for model_id
 3. Include only current production models
 4. If multiple tiers exist, use standard tier
-5. Return ONLY valid JSON - no explanations, no markdown, no extra text
+5. Leave notes empty unless there's important context
 
-BEGIN HTML:
-{html}
-END HTML
-
-NOW OUTPUT JSON:"""
+HTML:
+{html}"""
     return prompt
 
 

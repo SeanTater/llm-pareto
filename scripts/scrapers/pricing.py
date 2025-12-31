@@ -10,7 +10,7 @@ from pathlib import Path
 sys.path.append(str(Path(__file__).parent.parent))
 
 from scrapers.base import BaseScraper, ScraperError
-from llm_parser import LLMParser, LLMParseError, create_pricing_prompt
+from llm_parser import LLMParser, LLMParseError, create_pricing_prompt, PricingResponse
 from typing import Dict, List, Any
 
 
@@ -45,13 +45,13 @@ class PricingScraper(BaseScraper):
             print(f"Fetching OpenAI pricing from {url}...")
             html = self.fetch_url(url)
 
-            print("Parsing with Claude...")
+            print("Parsing with Ollama using Pydantic schema...")
             prompt = create_pricing_prompt(html, "OpenAI")
-            models = self.parser.parse(prompt)
+            result = self.parser.parse(prompt, schema=PricingResponse)
 
-            # Validate it's a list
-            if not isinstance(models, list):
-                raise ScraperError(f"Expected list, got {type(models)}")
+            models = result.get('models', [])
+            if not models:
+                raise ScraperError("No models found in response")
 
             print(f"✓ Found {len(models)} OpenAI models")
 
@@ -77,12 +77,14 @@ class PricingScraper(BaseScraper):
             print(f"Fetching Anthropic pricing from {url}...")
             html = self.fetch_url(url)
 
-            print("Parsing with Claude...")
+            print("Parsing with Ollama using Pydantic schema...")
             prompt = create_pricing_prompt(html, "Anthropic")
-            models = self.parser.parse(prompt)
+            result = self.parser.parse(prompt, schema=PricingResponse)
 
-            if not isinstance(models, list):
-                raise ScraperError(f"Expected list, got {type(models)}")
+            # Extract models list from validated response
+            models = result.get('models', [])
+            if not models:
+                raise ScraperError("No models found in response")
 
             print(f"✓ Found {len(models)} Anthropic models")
 
@@ -108,12 +110,13 @@ class PricingScraper(BaseScraper):
             print(f"Fetching Google AI pricing from {url}...")
             html = self.fetch_url(url)
 
-            print("Parsing with Claude...")
+            print("Parsing with Ollama using Pydantic schema...")
             prompt = create_pricing_prompt(html, "Google")
-            models = self.parser.parse(prompt)
+            result = self.parser.parse(prompt, schema=PricingResponse)
 
-            if not isinstance(models, list):
-                raise ScraperError(f"Expected list, got {type(models)}")
+            models = result.get('models', [])
+            if not models:
+                raise ScraperError("No models found in response")
 
             print(f"✓ Found {len(models)} Google models")
 
@@ -168,10 +171,10 @@ if __name__ == "__main__":
 
     scraper = PricingScraper()
 
-    # Test OpenAI only for quick iteration
-    print("Testing OpenAI scraper...\n")
+    # Test Google (simpler HTML)
+    print("Testing Google scraper...\n")
     try:
-        result = scraper.scrape_openai()
+        result = scraper.scrape_google()
         print("\n" + "="*50)
         print("RESULT:")
         print(json.dumps(result, indent=2))
