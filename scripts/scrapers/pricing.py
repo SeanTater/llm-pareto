@@ -17,9 +17,20 @@ from typing import Dict, List, Any
 class PricingScraper(BaseScraper):
     """Scrapes pricing information from provider websites"""
 
-    def __init__(self):
+    def __init__(self, use_ollama: bool = True):
         super().__init__()
-        self.parser = LLMParser(model="sonnet")
+        if use_ollama:
+            # Use Ollama with GPU proxy
+            self.parser = LLMParser(
+                model="ministral-3:latest",
+                backend="ollama",
+                ollama_url="http://localhost:11437"
+            )
+            print("Using Ollama at localhost:11437 with ministral-3:latest")
+        else:
+            # Fallback to Claude CLI
+            self.parser = LLMParser(model="sonnet", backend="claude")
+            print("Using Claude CLI")
 
     def scrape_openai(self) -> Dict[str, Any]:
         """

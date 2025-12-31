@@ -1,32 +1,37 @@
 #!/usr/bin/env python3
 """
-LLM-based parsing using Claude CLI
+LLM-based parsing using Ollama
 """
 
 import subprocess
 import json
 import re
+import requests
 from typing import Dict, Any, Optional
 
 
 class LLMParser:
-    """Wrapper for Claude CLI to parse HTML/text into structured data"""
+    """Wrapper for Ollama to parse HTML/text into structured data"""
 
-    def __init__(self, model: str = "sonnet"):
+    def __init__(self, model: str = "ministral-3:latest", backend: str = "ollama", ollama_url: str = "http://localhost:11437"):
         """
         Initialize parser
 
         Args:
-            model: Claude model to use (sonnet, opus, haiku)
+            model: Model to use (e.g., "ministral-3:latest", "ministral-3:8b")
+            backend: Backend to use ("ollama" or "claude")
+            ollama_url: Ollama API endpoint
         """
         self.model = model
+        self.backend = backend
+        self.ollama_url = ollama_url
 
     def parse(self, prompt: str, max_retries: int = 2) -> Dict[str, Any]:
         """
         Parse with LLM and return structured JSON
 
         Args:
-            prompt: Prompt to send to Claude
+            prompt: Prompt to send to LLM
             max_retries: Number of retries if parsing fails
 
         Returns:
@@ -37,23 +42,15 @@ class LLMParser:
         """
         for attempt in range(max_retries):
             try:
-                # Call Claude CLI
-                result = subprocess.run(
-                    ["claude", "--model", self.model],
-                    input=prompt,
-                    capture_output=True,
-                    text=True,
-                    timeout=60
-                )
-
-                if result.returncode != 0:
-                    raise LLMParseError(f"Claude CLI failed: {result.stderr}")
-
-                response = result.stdout
+                if self.backend == "ollama":
+                    response = self._call_ollama(prompt)
+                elif self.backend == "claude":
+                    response = self._call_claude(prompt)
+                else:
+                    raise LLMParseError(f"Unknown backend: {self.backend}")
 
                 # Extract JSON from response
                 data = self._extract_json(response)
-
                 return data
 
             except json.JSONDecodeError as e:
@@ -62,10 +59,41 @@ class LLMParser:
                     continue
                 raise LLMParseError(f"Failed to parse JSON after {max_retries} attempts: {e}")
 
-            except subprocess.TimeoutExpired:
-                raise LLMParseError("Claude CLI timed out after 60s")
-
         raise LLMParseError("Max retries exceeded")
+
+    def _call_ollama(self, prompt: str) -> str:
+        """Call Ollama API"""
+        try:
+            response = requests.post(
+                f"{self.ollama_url}/api/generate",
+                json={
+                    "model": self.model,
+                    "prompt": prompt,
+                    "stream": False
+                },
+                timeout=120  # Longer timeout for GPU
+            )
+            response.raise_for_status()
+            result = response.json()
+            return result.get("response", "")
+        except requests.RequestException as e:
+            raise LLMParseError(f"Ollama API failed: {e}")
+
+    def _call_claude(self, prompt: str) -> str:
+        """Call Claude CLI"""
+        try:
+            result = subprocess.run(
+                ["claude", "--model", self.model],
+                input=prompt,
+                capture_output=True,
+                text=True,
+                timeout=60
+            )
+            if result.returncode != 0:
+                raise LLMParseError(f"Claude CLI failed: {result.stderr}")
+            return result.stdout
+        except subprocess.TimeoutExpired:
+            raise LLMParseError("Claude CLI timed out after 60s")
 
     def _extract_json(self, text: str) -> Dict[str, Any]:
         """
@@ -121,29 +149,33 @@ def create_pricing_prompt(html: str, provider: str) -> str:
     if len(html) > 15000:
         html = html[:15000] + "\n... [truncated]"
 
-    prompt = f"""Extract pricing information for ALL {provider} language models from the HTML below.
+    prompt = f"""YOU ARE A DATA EXTRACTION TOOL. Your ONLY job is to extract pricing information and return JSON. Do NOT explain, describe, or comment.
 
-Return a JSON array with this exact structure:
+TASK: Extract pricing for ALL {provider} language models from the HTML below.
+
+OUTPUT FORMAT (return ONLY this, nothing else):
 [
   {{
     "model_id": "gpt-4o",
     "model_name": "GPT-4o",
     "input_per_1m_tokens": 5.00,
     "output_per_1m_tokens": 15.00,
-    "notes": "any relevant notes or context"
+    "notes": ""
   }}
 ]
 
-Important:
-- Convert all prices to dollars per 1 million tokens
-- Use lowercase-with-hyphens for model_id (e.g., "gpt-4o", "claude-3-5-sonnet")
-- Include only current production models (not deprecated/legacy)
-- If a model has multiple pricing tiers, use the standard tier
-- Return ONLY the JSON array, no other text
+RULES:
+1. Convert all prices to dollars per 1 million tokens
+2. Use lowercase-with-hyphens for model_id
+3. Include only current production models
+4. If multiple tiers exist, use standard tier
+5. Return ONLY valid JSON - no explanations, no markdown, no extra text
 
-HTML:
+BEGIN HTML:
 {html}
-"""
+END HTML
+
+NOW OUTPUT JSON:"""
     return prompt
 
 
@@ -197,19 +229,24 @@ Content:
 
 # Example usage
 if __name__ == "__main__":
-    parser = LLMParser()
+    # Test Ollama
+    print("Testing Ollama parser...")
+    parser = LLMParser(
+        model="ministral-3:latest",
+        backend="ollama",
+        ollama_url="http://localhost:11437"
+    )
 
     # Test with simple JSON extraction
-    test_prompt = """
-    Return a JSON object with pricing for GPT-4:
-    {
-      "model": "gpt-4",
-      "input": 30.0,
-      "output": 60.0
-    }
-    """
+    test_prompt = """Return ONLY a JSON object (no other text) with pricing for GPT-4:
+{
+  "model": "gpt-4",
+  "input": 30.0,
+  "output": 60.0
+}"""
 
     try:
+        print("Calling Ollama...")
         result = parser.parse(test_prompt)
         print("✓ Parser working!")
         print(json.dumps(result, indent=2))
