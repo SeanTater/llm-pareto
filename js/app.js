@@ -381,11 +381,15 @@ function renderDataTable() {
                         <span class="stat-value">${benchScore ? benchScore.toFixed(1) : 'N/A'}</span>
                     </div>
                     <div class="stat">
-                        <span class="stat-label">Avg Cost/1M</span>
+                        <span class="stat-label">Input/1M</span>
                         <span class="stat-value">
-                            ${model.pricing
-                                ? '$' + ((model.pricing.input_per_1m_tokens + model.pricing.output_per_1m_tokens) / 2).toFixed(2)
-                                : 'N/A'}
+                            ${model.pricing ? '$' + model.pricing.input_per_1m_tokens.toFixed(2) : 'N/A'}
+                        </span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Output/1M</span>
+                        <span class="stat-value">
+                            ${model.pricing ? '$' + model.pricing.output_per_1m_tokens.toFixed(2) : 'N/A'}
                         </span>
                     </div>
                 </div>

@@ -1,6 +1,91 @@
 {
   "models": [
     {
+      "id": "gpt-5-2",
+      "name": "GPT-5.2",
+      "provider": "OpenAI",
+      "family": "GPT-5",
+      "pricing": {
+        "input_per_1m_tokens": 1.75,
+        "output_per_1m_tokens": 14.0,
+        "source": {
+          "url": "https://openai.com/api/pricing/",
+          "type": "primary",
+          "collected": "2025-12-31",
+          "notes": "Best model for coding and agentic tasks"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gpt-5-2-pro",
+      "name": "GPT-5.2 Pro",
+      "provider": "OpenAI",
+      "family": "GPT-5",
+      "pricing": {
+        "input_per_1m_tokens": 21.0,
+        "output_per_1m_tokens": 168.0,
+        "source": {
+          "url": "https://openai.com/api/pricing/",
+          "type": "primary",
+          "collected": "2025-12-31",
+          "notes": "The smartest and most precise model"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gpt-5-mini",
+      "name": "GPT-5 Mini",
+      "provider": "OpenAI",
+      "family": "GPT-5",
+      "pricing": {
+        "input_per_1m_tokens": 0.25,
+        "output_per_1m_tokens": 2.0,
+        "source": {
+          "url": "https://openai.com/api/pricing/",
+          "type": "primary",
+          "collected": "2025-12-31",
+          "notes": "Faster, cheaper version for well-defined tasks"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gpt-4-1",
+      "name": "GPT-4.1",
+      "provider": "OpenAI",
+      "family": "GPT-4",
+      "pricing": {
+        "input_per_1m_tokens": 3.0,
+        "output_per_1m_tokens": 12.0,
+        "source": {
+          "url": "https://openai.com/api/pricing/",
+          "type": "primary",
+          "collected": "2025-12-31",
+          "notes": "Fine-tuning pricing"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gpt-4-1-mini",
+      "name": "GPT-4.1 Mini",
+      "provider": "OpenAI",
+      "family": "GPT-4",
+      "pricing": {
+        "input_per_1m_tokens": 0.8,
+        "output_per_1m_tokens": 3.2,
+        "source": {
+          "url": "https://openai.com/api/pricing/",
+          "type": "primary",
+          "collected": "2025-12-31",
+          "notes": "Fine-tuning pricing"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
       "id": "gpt-4o",
       "name": "GPT-4o",
       "provider": "OpenAI",
@@ -13,8 +98,8 @@
         "notes": "Estimated from context - exact parameter count not disclosed"
       },
       "pricing": {
-        "input_per_1m_tokens": 5.00,
-        "output_per_1m_tokens": 15.00,
+        "input_per_1m_tokens": 5.0,
+        "output_per_1m_tokens": 15.0,
         "source": {
           "url": "https://openai.com/api/pricing/",
           "type": "primary",
@@ -53,8 +138,8 @@
         "notes": "Estimated - exact parameter count not disclosed"
       },
       "pricing": {
-        "input_per_1m_tokens": 3.00,
-        "output_per_1m_tokens": 15.00,
+        "input_per_1m_tokens": 3.0,
+        "output_per_1m_tokens": 15.0,
         "source": {
           "url": "https://www.anthropic.com/pricing",
           "type": "primary",
@@ -93,8 +178,8 @@
         "notes": "Estimated - exact parameter count not disclosed"
       },
       "pricing": {
-        "input_per_1m_tokens": 0.10,
-        "output_per_1m_tokens": 0.40,
+        "input_per_1m_tokens": 0.1,
+        "output_per_1m_tokens": 0.4,
         "source": {
           "url": "https://ai.google.dev/pricing",
           "type": "primary",
@@ -174,8 +259,8 @@
         "notes": "Official parameter count"
       },
       "pricing": {
-        "input_per_1m_tokens": 5.00,
-        "output_per_1m_tokens": 15.00,
+        "input_per_1m_tokens": 5.0,
+        "output_per_1m_tokens": 15.0,
         "source": {
           "url": "https://www.together.ai/pricing",
           "type": "secondary",
@@ -223,8 +308,8 @@
         "notes": "Estimated - exact parameter count not disclosed"
       },
       "pricing": {
-        "input_per_1m_tokens": 0.50,
-        "output_per_1m_tokens": 1.50,
+        "input_per_1m_tokens": 0.5,
+        "output_per_1m_tokens": 1.5,
         "source": {
           "url": "https://openai.com/api/pricing/",
           "type": "primary",
@@ -242,7 +327,92 @@
           }
         }
       }
+    },
+    {
+      "id": "claude-opus-4-5",
+      "name": "Claude Opus 4.5",
+      "provider": "Anthropic",
+      "family": "Claude",
+      "pricing": {
+        "input_per_1m_tokens": 15.0,
+        "output_per_1m_tokens": 75.0,
+        "source": {
+          "url": "https://www.anthropic.com/pricing",
+          "type": "primary",
+          "collected": "2025-12-31T11:11:50.039847",
+          "scrape_method": "llm"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "claude-sonnet-4-5",
+      "name": "Claude Sonnet 4.5",
+      "provider": "Anthropic",
+      "family": "Claude",
+      "pricing": {
+        "input_per_1m_tokens": 3.0,
+        "output_per_1m_tokens": 15.0,
+        "source": {
+          "url": "https://www.anthropic.com/pricing",
+          "type": "primary",
+          "collected": "2025-12-31T11:11:50.039847",
+          "scrape_method": "llm"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "claude-3-7-sonnet",
+      "name": "Claude 3.7 Sonnet",
+      "provider": "Anthropic",
+      "family": "Claude",
+      "pricing": {
+        "input_per_1m_tokens": 3.0,
+        "output_per_1m_tokens": 15.0,
+        "source": {
+          "url": "https://www.anthropic.com/pricing",
+          "type": "primary",
+          "collected": "2025-12-31T11:11:50.039847",
+          "scrape_method": "llm"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "claude-haiku-4",
+      "name": "Claude Haiku 4",
+      "provider": "Anthropic",
+      "family": "Claude",
+      "pricing": {
+        "input_per_1m_tokens": 0.8,
+        "output_per_1m_tokens": 4.0,
+        "source": {
+          "url": "https://www.anthropic.com/pricing",
+          "type": "primary",
+          "collected": "2025-12-31T11:11:50.039847",
+          "scrape_method": "llm"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "claude-3-5-haiku",
+      "name": "Claude 3.5 Haiku",
+      "provider": "Anthropic",
+      "family": "Claude",
+      "pricing": {
+        "input_per_1m_tokens": 0.8,
+        "output_per_1m_tokens": 4.0,
+        "source": {
+          "url": "https://www.anthropic.com/pricing",
+          "type": "primary",
+          "collected": "2025-12-31T11:11:50.039847",
+          "scrape_method": "llm"
+        }
+      },
+      "benchmarks": {}
     }
   ],
-  "last_updated": "2024-12-31T12:00:00Z"
+  "last_updated": "2025-12-31T11:12:16.712734"
 }
