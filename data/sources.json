@@ -1,0 +1,126 @@
+{
+  "sources": [
+    {
+      "id": "chatbot_arena",
+      "name": "LMSYS Chatbot Arena Leaderboard",
+      "url": "https://lmarena.ai/leaderboard",
+      "type": "leaderboard",
+      "metrics": ["chatbot_arena_elo"],
+      "scrape_method": "llm",
+      "update_frequency": "weekly",
+      "notes": "Community-driven human preference rankings"
+    },
+    {
+      "id": "huggingface_leaderboard",
+      "name": "Hugging Face Open LLM Leaderboard",
+      "url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+      "type": "leaderboard",
+      "metrics": ["mmlu", "humaneval", "gsm8k", "bbh"],
+      "scrape_method": "llm",
+      "update_frequency": "weekly",
+      "notes": "Academic benchmarks for open-source models"
+    },
+    {
+      "id": "openai_pricing",
+      "name": "OpenAI API Pricing",
+      "url": "https://openai.com/api/pricing/",
+      "type": "primary",
+      "metrics": ["pricing"],
+      "scrape_method": "llm",
+      "update_frequency": "monthly",
+      "provider": "OpenAI"
+    },
+    {
+      "id": "anthropic_pricing",
+      "name": "Anthropic Pricing",
+      "url": "https://www.anthropic.com/pricing",
+      "type": "primary",
+      "metrics": ["pricing"],
+      "scrape_method": "llm",
+      "update_frequency": "monthly",
+      "provider": "Anthropic"
+    },
+    {
+      "id": "google_ai_pricing",
+      "name": "Google AI Pricing",
+      "url": "https://ai.google.dev/pricing",
+      "type": "primary",
+      "metrics": ["pricing"],
+      "scrape_method": "llm",
+      "update_frequency": "monthly",
+      "provider": "Google"
+    },
+    {
+      "id": "pricepertoken",
+      "name": "Price Per Token Comparison",
+      "url": "https://pricepertoken.com/",
+      "type": "aggregator",
+      "metrics": ["pricing"],
+      "scrape_method": "llm",
+      "update_frequency": "weekly",
+      "notes": "Aggregates pricing across providers"
+    },
+    {
+      "id": "openai_blog",
+      "name": "OpenAI Blog",
+      "url": "https://openai.com/index/",
+      "type": "primary",
+      "metrics": ["mmlu", "humaneval", "gsm8k", "parameters"],
+      "scrape_method": "manual",
+      "update_frequency": "as_needed",
+      "provider": "OpenAI",
+      "notes": "Check for new model releases and benchmarks"
+    },
+    {
+      "id": "anthropic_blog",
+      "name": "Anthropic News",
+      "url": "https://www.anthropic.com/news",
+      "type": "primary",
+      "metrics": ["mmlu", "humaneval", "gsm8k", "parameters"],
+      "scrape_method": "manual",
+      "update_frequency": "as_needed",
+      "provider": "Anthropic",
+      "notes": "Check for new Claude model releases"
+    },
+    {
+      "id": "google_ai_blog",
+      "name": "Google AI Blog",
+      "url": "https://blog.google/technology/ai/",
+      "type": "primary",
+      "metrics": ["mmlu", "humaneval", "gsm8k", "parameters"],
+      "scrape_method": "manual",
+      "update_frequency": "as_needed",
+      "provider": "Google",
+      "notes": "Check for Gemini model updates"
+    },
+    {
+      "id": "meta_ai_blog",
+      "name": "Meta AI Blog",
+      "url": "https://ai.meta.com/blog/",
+      "type": "primary",
+      "metrics": ["mmlu", "humaneval", "gsm8k", "parameters"],
+      "scrape_method": "manual",
+      "update_frequency": "as_needed",
+      "provider": "Meta",
+      "notes": "Check for Llama model updates"
+    }
+  ],
+  "scrape_methods": {
+    "llm": {
+      "description": "Use LLM (Claude CLI or local model) to parse HTML and extract data",
+      "best_for": "Complex, dynamic pages with irregular structure"
+    },
+    "regex": {
+      "description": "Use regular expressions to extract data from HTML",
+      "best_for": "Simple, well-structured pages with predictable patterns"
+    },
+    "api": {
+      "description": "Use official API if available",
+      "best_for": "When official API exists (e.g., Hugging Face datasets API)"
+    },
+    "manual": {
+      "description": "Manual review and data entry",
+      "best_for": "Infrequent updates, complex content requiring human judgment"
+    }
+  }
+}

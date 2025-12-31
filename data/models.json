@@ -1,0 +1,248 @@
+{
+  "models": [
+    {
+      "id": "gpt-4o",
+      "name": "GPT-4o",
+      "provider": "OpenAI",
+      "family": "GPT-4",
+      "parameters_billions": 200,
+      "parameters_source": {
+        "url": "https://openai.com/index/hello-gpt-4o/",
+        "type": "estimated",
+        "collected": "2024-05-13",
+        "notes": "Estimated from context - exact parameter count not disclosed"
+      },
+      "pricing": {
+        "input_per_1m_tokens": 5.00,
+        "output_per_1m_tokens": 15.00,
+        "source": {
+          "url": "https://openai.com/api/pricing/",
+          "type": "primary",
+          "collected": "2024-12-31"
+        }
+      },
+      "benchmarks": {
+        "mmlu": {
+          "score": 88.7,
+          "source": {
+            "url": "https://openai.com/index/hello-gpt-4o/",
+            "type": "primary",
+            "collected": "2024-05-13"
+          }
+        },
+        "humaneval": {
+          "score": 90.2,
+          "source": {
+            "url": "https://openai.com/index/hello-gpt-4o/",
+            "type": "primary",
+            "collected": "2024-05-13"
+          }
+        }
+      }
+    },
+    {
+      "id": "claude-3-5-sonnet",
+      "name": "Claude 3.5 Sonnet",
+      "provider": "Anthropic",
+      "family": "Claude",
+      "parameters_billions": 175,
+      "parameters_source": {
+        "url": "https://www.anthropic.com/news/claude-3-5-sonnet",
+        "type": "estimated",
+        "collected": "2024-06-20",
+        "notes": "Estimated - exact parameter count not disclosed"
+      },
+      "pricing": {
+        "input_per_1m_tokens": 3.00,
+        "output_per_1m_tokens": 15.00,
+        "source": {
+          "url": "https://www.anthropic.com/pricing",
+          "type": "primary",
+          "collected": "2024-12-31"
+        }
+      },
+      "benchmarks": {
+        "mmlu": {
+          "score": 88.3,
+          "source": {
+            "url": "https://www.anthropic.com/news/claude-3-5-sonnet",
+            "type": "primary",
+            "collected": "2024-06-20"
+          }
+        },
+        "humaneval": {
+          "score": 92.0,
+          "source": {
+            "url": "https://www.anthropic.com/news/claude-3-5-sonnet",
+            "type": "primary",
+            "collected": "2024-06-20"
+          }
+        }
+      }
+    },
+    {
+      "id": "gemini-2-0-flash",
+      "name": "Gemini 2.0 Flash",
+      "provider": "Google",
+      "family": "Gemini",
+      "parameters_billions": 100,
+      "parameters_source": {
+        "url": "https://blog.google/technology/ai/google-gemini-ai-update-december-2024/",
+        "type": "estimated",
+        "collected": "2024-12-11",
+        "notes": "Estimated - exact parameter count not disclosed"
+      },
+      "pricing": {
+        "input_per_1m_tokens": 0.10,
+        "output_per_1m_tokens": 0.40,
+        "source": {
+          "url": "https://ai.google.dev/pricing",
+          "type": "primary",
+          "collected": "2024-12-31"
+        }
+      },
+      "benchmarks": {
+        "mmlu": {
+          "score": 84.2,
+          "source": {
+            "url": "https://blog.google/technology/ai/google-gemini-ai-update-december-2024/",
+            "type": "primary",
+            "collected": "2024-12-11"
+          }
+        }
+      }
+    },
+    {
+      "id": "llama-3-1-70b",
+      "name": "Llama 3.1 70B",
+      "provider": "Meta",
+      "family": "Llama",
+      "parameters_billions": 70,
+      "parameters_source": {
+        "url": "https://ai.meta.com/blog/meta-llama-3-1/",
+        "type": "primary",
+        "collected": "2024-07-23",
+        "notes": "Official parameter count"
+      },
+      "pricing": {
+        "input_per_1m_tokens": 0.99,
+        "output_per_1m_tokens": 0.99,
+        "source": {
+          "url": "https://www.together.ai/pricing",
+          "type": "secondary",
+          "collected": "2024-12-31",
+          "notes": "Third-party hosting pricing (Together AI)"
+        }
+      },
+      "benchmarks": {
+        "mmlu": {
+          "score": 83.6,
+          "source": {
+            "url": "https://ai.meta.com/blog/meta-llama-3-1/",
+            "type": "primary",
+            "collected": "2024-07-23"
+          }
+        },
+        "humaneval": {
+          "score": 80.5,
+          "source": {
+            "url": "https://ai.meta.com/blog/meta-llama-3-1/",
+            "type": "primary",
+            "collected": "2024-07-23"
+          }
+        },
+        "gsm8k": {
+          "score": 95.1,
+          "source": {
+            "url": "https://ai.meta.com/blog/meta-llama-3-1/",
+            "type": "primary",
+            "collected": "2024-07-23"
+          }
+        }
+      }
+    },
+    {
+      "id": "llama-3-1-405b",
+      "name": "Llama 3.1 405B",
+      "provider": "Meta",
+      "family": "Llama",
+      "parameters_billions": 405,
+      "parameters_source": {
+        "url": "https://ai.meta.com/blog/meta-llama-3-1/",
+        "type": "primary",
+        "collected": "2024-07-23",
+        "notes": "Official parameter count"
+      },
+      "pricing": {
+        "input_per_1m_tokens": 5.00,
+        "output_per_1m_tokens": 15.00,
+        "source": {
+          "url": "https://www.together.ai/pricing",
+          "type": "secondary",
+          "collected": "2024-12-31",
+          "notes": "Third-party hosting pricing (Together AI)"
+        }
+      },
+      "benchmarks": {
+        "mmlu": {
+          "score": 87.3,
+          "source": {
+            "url": "https://ai.meta.com/blog/meta-llama-3-1/",
+            "type": "primary",
+            "collected": "2024-07-23"
+          }
+        },
+        "humaneval": {
+          "score": 89.0,
+          "source": {
+            "url": "https://ai.meta.com/blog/meta-llama-3-1/",
+            "type": "primary",
+            "collected": "2024-07-23"
+          }
+        },
+        "gsm8k": {
+          "score": 96.8,
+          "source": {
+            "url": "https://ai.meta.com/blog/meta-llama-3-1/",
+            "type": "primary",
+            "collected": "2024-07-23"
+          }
+        }
+      }
+    },
+    {
+      "id": "gpt-3-5-turbo",
+      "name": "GPT-3.5 Turbo",
+      "provider": "OpenAI",
+      "family": "GPT-3",
+      "parameters_billions": 20,
+      "parameters_source": {
+        "url": "https://platform.openai.com/docs/models/gpt-3-5-turbo",
+        "type": "estimated",
+        "collected": "2024-12-31",
+        "notes": "Estimated - exact parameter count not disclosed"
+      },
+      "pricing": {
+        "input_per_1m_tokens": 0.50,
+        "output_per_1m_tokens": 1.50,
+        "source": {
+          "url": "https://openai.com/api/pricing/",
+          "type": "primary",
+          "collected": "2024-12-31"
+        }
+      },
+      "benchmarks": {
+        "mmlu": {
+          "score": 70.0,
+          "source": {
+            "url": "https://platform.openai.com/docs/models/gpt-3-5-turbo",
+            "type": "estimated",
+            "collected": "2024-12-31",
+            "notes": "Estimated from community benchmarks"
+          }
+        }
+      }
+    }
+  ],
+  "last_updated": "2024-12-31T12:00:00Z"
+}
