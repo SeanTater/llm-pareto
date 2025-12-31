@@ -11,26 +11,60 @@ sys.path.append(str(Path(__file__).parent.parent))
 
 from scrapers.base import BaseScraper, ScraperError
 from llm_parser import LLMParser, LLMParseError, create_pricing_prompt, PricingResponse
+from screenshot import screenshot_url
 from typing import Dict, List, Any
 
 
 class PricingScraper(BaseScraper):
     """Scrapes pricing information from provider websites"""
 
-    def __init__(self, use_ollama: bool = True):
+    def __init__(self, use_ollama: bool = True, use_vision: bool = False, vision_model: str = "qwen3-vl:8b"):
         super().__init__()
+        self.use_vision = use_vision
+
         if use_ollama:
             # Use Ollama with GPU proxy
+            model = vision_model if use_vision else "ministral-3:latest"
             self.parser = LLMParser(
-                model="ministral-3:latest",
+                model=model,
                 backend="ollama",
                 ollama_url="http://localhost:11437"
             )
-            print("Using Ollama at localhost:11437 with ministral-3:latest")
+            print(f"Using Ollama at localhost:11437 with {model}")
         else:
             # Fallback to Claude CLI
             self.parser = LLMParser(model="sonnet", backend="claude")
             print("Using Claude CLI")
+
+    def _scrape_with_vision(self, url: str, provider: str) -> List[Dict[str, Any]]:
+        """Helper to scrape using screenshot + vision model"""
+        print(f"Taking screenshot of {url}...")
+        image_b64 = screenshot_url(url)
+
+        print(f"Extracting pricing with vision model...")
+        prompt = f"""Extract ALL {provider} language model pricing from this pricing page screenshot.
+
+Return a JSON object with this structure:
+{{
+  "models": [
+    {{
+      "model_id": "model-name",
+      "model_name": "Model Name",
+      "input_per_1m_tokens": 5.00,
+      "output_per_1m_tokens": 15.00,
+      "notes": ""
+    }}
+  ]
+}}
+
+IMPORTANT:
+- Convert all prices to dollars per 1 million tokens
+- Use lowercase-with-hyphens for model_id
+- Extract ONLY {provider} models
+- Include all production models visible in the screenshot"""
+
+        result = self.parser.parse(prompt, schema=PricingResponse, image_base64=image_b64)
+        return result.get('models', [])
 
     def scrape_openai(self) -> Dict[str, Any]:
         """
@@ -74,15 +108,18 @@ class PricingScraper(BaseScraper):
         url = "https://www.anthropic.com/pricing"
 
         try:
-            print(f"Fetching Anthropic pricing from {url}...")
-            html = self.fetch_url(url)
+            # Use vision if enabled, otherwise try HTML
+            if self.use_vision:
+                models = self._scrape_with_vision(url, "Anthropic")
+            else:
+                print(f"Fetching Anthropic pricing from {url}...")
+                html = self.fetch_url(url)
 
-            print("Parsing with Ollama using Pydantic schema...")
-            prompt = create_pricing_prompt(html, "Anthropic")
-            result = self.parser.parse(prompt, schema=PricingResponse)
+                print("Parsing with Ollama using Pydantic schema...")
+                prompt = create_pricing_prompt(html, "Anthropic")
+                result = self.parser.parse(prompt, schema=PricingResponse)
+                models = result.get('models', [])
 
-            # Extract models list from validated response
-            models = result.get('models', [])
             if not models:
                 raise ScraperError("No models found in response")
 
@@ -95,7 +132,7 @@ class PricingScraper(BaseScraper):
                     "url": url,
                     "type": "primary",
                     "collected": self._now(),
-                    "scrape_method": "llm"
+                    "scrape_method": "vision" if self.use_vision else "llm"
                 }
             }
 
@@ -167,14 +204,14 @@ class PricingScraper(BaseScraper):
 if __name__ == "__main__":
     import json
 
-    print("=== Testing Pricing Scraper ===\n")
+    print("=== Testing Pricing Scraper with Vision ===\n")
 
-    scraper = PricingScraper()
+    # Test with vision model for Anthropic (complex JavaScript page)
+    scraper = PricingScraper(use_vision=True, vision_model="qwen3-vl:8b")
 
-    # Test Google (simpler HTML)
-    print("Testing Google scraper...\n")
+    print("Testing Anthropic scraper with vision...\n")
     try:
-        result = scraper.scrape_google()
+        result = scraper.scrape_anthropic()
         print("\n" + "="*50)
         print("RESULT:")
         print(json.dumps(result, indent=2))

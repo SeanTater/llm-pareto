@@ -41,7 +41,7 @@ class LLMParser:
         self.backend = backend
         self.ollama_url = ollama_url
 
-    def parse(self, prompt: str, max_retries: int = 2, schema: Optional[type[BaseModel]] = None) -> Dict[str, Any]:
+    def parse(self, prompt: str, max_retries: int = 2, schema: Optional[type[BaseModel]] = None, image_base64: Optional[str] = None) -> Dict[str, Any]:
         """
         Parse with LLM and return structured JSON
 
@@ -49,6 +49,7 @@ class LLMParser:
             prompt: Prompt to send to LLM
             max_retries: Number of retries if parsing fails
             schema: Optional Pydantic model to constrain output format
+            image_base64: Optional base64-encoded image for vision models
 
         Returns:
             Parsed JSON data
@@ -59,7 +60,7 @@ class LLMParser:
         for attempt in range(max_retries):
             try:
                 if self.backend == "ollama":
-                    response = self._call_ollama(prompt, schema)
+                    response = self._call_ollama(prompt, schema, image_base64)
                 elif self.backend == "claude":
                     response = self._call_claude(prompt)
                 else:
@@ -83,8 +84,8 @@ class LLMParser:
 
         raise LLMParseError("Max retries exceeded")
 
-    def _call_ollama(self, prompt: str, schema: Optional[type[BaseModel]] = None) -> str:
-        """Call Ollama API with optional Pydantic schema constraint"""
+    def _call_ollama(self, prompt: str, schema: Optional[type[BaseModel]] = None, image_base64: Optional[str] = None) -> str:
+        """Call Ollama API with optional Pydantic schema constraint and vision support"""
         try:
             # Prepare request body
             body = {
@@ -92,6 +93,10 @@ class LLMParser:
                 "prompt": prompt,
                 "stream": False
             }
+
+            # Add image if provided (for vision models)
+            if image_base64:
+                body["images"] = [image_base64]
 
             # Add schema if provided, otherwise just request JSON
             if schema:
@@ -102,11 +107,14 @@ class LLMParser:
             response = requests.post(
                 f"{self.ollama_url}/api/generate",
                 json=body,
-                timeout=120  # Longer timeout for GPU
+                timeout=300  # Longer timeout for vision models
             )
             response.raise_for_status()
             result = response.json()
-            return result.get("response", "")
+
+            # qwen3-vl puts JSON output in 'thinking' field, text models use 'response'
+            output = result.get("response", "") or result.get("thinking", "")
+            return output
         except requests.RequestException as e:
             raise LLMParseError(f"Ollama API failed: {e}")
 
