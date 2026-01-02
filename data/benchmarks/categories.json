@@ -1,0 +1,24 @@
+{
+  "categories": {
+    "knowledge": {
+      "name": "Knowledge & Reasoning",
+      "description": "General knowledge, comprehension, and reasoning tasks",
+      "order": 1
+    },
+    "coding": {
+      "name": "Code Generation",
+      "description": "Programming and software development tasks",
+      "order": 2
+    },
+    "math": {
+      "name": "Mathematics",
+      "description": "Mathematical reasoning and problem-solving",
+      "order": 3
+    },
+    "agentic": {
+      "name": "Agentic & Tool Use",
+      "description": "Complex multi-step tasks requiring planning and tool usage",
+      "order": 4
+    }
+  }
+}

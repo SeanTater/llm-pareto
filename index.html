@@ -18,19 +18,24 @@
             <div class="control-group">
                 <label for="benchmark-select">Benchmark:</label>
                 <select id="benchmark-select">
-                    <option value="mmlu">MMLU</option>
-                    <option value="humaneval">HumanEval</option>
-                    <option value="chatbot_arena_elo">Chatbot Arena (ELO)</option>
-                    <option value="gsm8k">GSM8K</option>
-                    <option value="bbh">BBH</option>
+                    <option value="">Loading benchmarks...</option>
                 </select>
+            </div>
+
+            <div class="control-group benchmark-info" id="benchmark-info" style="display: none;">
+                <div class="info-content">
+                    <strong id="benchmark-name"></strong>
+                    <p id="benchmark-description"></p>
+                    <small id="benchmark-meta"></small>
+                </div>
             </div>
 
             <div class="control-group">
                 <label for="xaxis-select">X-Axis:</label>
                 <select id="xaxis-select">
-                    <option value="parameters">Parameters (Billions)</option>
                     <option value="cost">Cost (per 1M tokens)</option>
+                    <option value="total_parameters">Total Parameters (Billions)</option>
+                    <option value="active_parameters">Active Parameters (Billions)</option>
                 </select>
             </div>
 
@@ -39,24 +44,12 @@
                 <select id="family-filter">
                     <option value="all">All</option>
                     <option value="GPT-4">GPT-4</option>
+                    <option value="GPT-5">GPT-5</option>
                     <option value="Claude">Claude</option>
                     <option value="Gemini">Gemini</option>
                     <option value="Llama">Llama</option>
+                    <option value="Qwen3">Qwen3</option>
                 </select>
-            </div>
-
-            <div class="control-group">
-                <label>
-                    <input type="checkbox" id="show-pareto" checked>
-                    Show Pareto Frontier
-                </label>
-            </div>
-
-            <div class="control-group">
-                <label>
-                    <input type="checkbox" id="show-citations">
-                    Show Citations
-                </label>
             </div>
         </div>
 
@@ -76,6 +69,14 @@
 
         <footer>
             <p id="last-updated">Last Updated: Loading...</p>
+            <details class="estimation-notes">
+                <summary>Estimation notes</summary>
+                <div class="estimation-notes-body">
+                    <p>We estimate missing pricing and parameters from a single anchor model: DeepSeek-R1 on OpenRouter. We assume the same input/output ratio and scale costs linearly with parameters.</p>
+                    <p>Active-parameter estimate uses $0.300 input and $1.200 output per 1M tokens divided by 37B active parameters.</p>
+                    <p>Total-parameter estimate uses the same prices divided by 671B total parameters.</p>
+                </div>
+            </details>
         </footer>
     </main>
 

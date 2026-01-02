@@ -1,0 +1,272 @@
+{
+  "provider": "OpenAI",
+  "family": "o-series",
+  "models": [
+    {
+      "id": "openai-o3",
+      "name": "OpenAI o3",
+      "provider": "OpenAI",
+      "family": "o-series",
+      "benchmarks": {
+        "charxiv_reasoning": {
+          "score": 78.6,
+          "source": {
+            "url": "https://openai.com/index/introducing-gpt-5/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "tau2bench_retail": {
+          "score": 80.2,
+          "source": {
+            "url": "https://openai.com/index/introducing-gpt-5/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "tau2bench_airline": {
+          "score": 64.8,
+          "source": {
+            "url": "https://openai.com/index/introducing-gpt-5/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "tau2bench_telecom": {
+          "score": 58.2,
+          "source": {
+            "url": "https://openai.com/index/introducing-gpt-5/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "healthbench_hard_hallucinations": {
+          "score": 12.9,
+          "source": {
+            "url": "https://openai.com/index/introducing-gpt-5/",
+            "type": "primary",
+            "collected": "2025-12-31",
+            "notes": "Lower is better - hallucination rate"
+          }
+        },
+        "healthbench_hard": {
+          "score": 31.6,
+          "source": {
+            "url": "https://openai.com/index/introducing-gpt-5/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "healthbench": {
+          "score": 59.8,
+          "source": {
+            "url": "https://openai.com/index/introducing-gpt-5/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "erqa": {
+          "score": 64.0,
+          "source": {
+            "url": "https://openai.com/index/introducing-gpt-5/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "videommmu": {
+          "score": 83.3,
+          "source": {
+            "url": "https://openai.com/index/introducing-gpt-5/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "mmmu_pro": {
+          "score": 76.4,
+          "source": {
+            "url": "https://openai.com/index/introducing-gpt-5/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "mmmu": {
+          "score": 82.9,
+          "source": {
+            "url": "https://openai.com/index/introducing-gpt-5/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "collie": {
+          "score": 98.4,
+          "source": {
+            "url": "https://openai.com/index/introducing-gpt-5/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "browsecomp": {
+          "score": 49.7,
+          "source": {
+            "url": "https://openai.com/index/introducing-gpt-5/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "scale_multichallenge": {
+          "score": 60.4,
+          "source": {
+            "url": "https://openai.com/index/introducing-gpt-5/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        }
+      }
+    },
+    {
+      "id": "o1",
+      "name": "o1",
+      "provider": "OpenAI",
+      "family": "o-series",
+      "pricing": {
+        "input_per_1m_tokens": 15.0,
+        "output_per_1m_tokens": 60.0,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "o1-pro",
+      "name": "o1 Pro",
+      "provider": "OpenAI",
+      "family": "o-series",
+      "pricing": {
+        "input_per_1m_tokens": 150.0,
+        "output_per_1m_tokens": 600.0,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "o3-pro",
+      "name": "o3 Pro",
+      "provider": "OpenAI",
+      "family": "o-series",
+      "pricing": {
+        "input_per_1m_tokens": 20.0,
+        "output_per_1m_tokens": 80.0,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "o3",
+      "name": "o3",
+      "provider": "OpenAI",
+      "family": "o-series",
+      "pricing": {
+        "input_per_1m_tokens": 2.0,
+        "output_per_1m_tokens": 8.0,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "o3-deep-research",
+      "name": "o3 Deep Research",
+      "provider": "OpenAI",
+      "family": "o-series",
+      "pricing": {
+        "input_per_1m_tokens": 10.0,
+        "output_per_1m_tokens": 40.0,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "o4-mini",
+      "name": "o4 Mini",
+      "provider": "OpenAI",
+      "family": "o-series",
+      "pricing": {
+        "input_per_1m_tokens": 1.1,
+        "output_per_1m_tokens": 4.4,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "o4-mini-deep-research",
+      "name": "o4 Mini Deep Research",
+      "provider": "OpenAI",
+      "family": "o-series",
+      "pricing": {
+        "input_per_1m_tokens": 2.0,
+        "output_per_1m_tokens": 8.0,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "o3-mini",
+      "name": "o3 Mini",
+      "provider": "OpenAI",
+      "family": "o-series",
+      "pricing": {
+        "input_per_1m_tokens": 1.1,
+        "output_per_1m_tokens": 4.4,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "o1-mini",
+      "name": "o1 Mini",
+      "provider": "OpenAI",
+      "family": "o-series",
+      "pricing": {
+        "input_per_1m_tokens": 1.1,
+        "output_per_1m_tokens": 4.4,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    }
+  ],
+  "last_updated": "2025-12-31T15:00:00.000000"
+}

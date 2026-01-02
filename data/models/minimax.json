@@ -1,0 +1,44 @@
+{
+  "provider": "MiniMax",
+  "models": [
+    {
+      "id": "minimax-m2",
+      "name": "MiniMax M2",
+      "provider": "MiniMax",
+      "family": "MiniMax",
+      "parameters_billions": 230,
+      "parameters_source": {
+        "url": "https://ollama.com/library/devstral-2",
+        "type": "official",
+        "collected": "2025-12-31"
+      },
+      "benchmarks": {
+        "swebench_verified": {
+          "score": 69.4,
+          "source": {
+            "url": "https://ollama.com/library/devstral-2",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        },
+        "swebench_multilingual": {
+          "score": 56.5,
+          "source": {
+            "url": "https://ollama.com/library/devstral-2",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        },
+        "terminalbench_2_0": {
+          "score": 30.0,
+          "source": {
+            "url": "https://ollama.com/library/devstral-2",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        }
+      }
+    }
+  ],
+  "last_updated": "2026-01-01T10:14:51.131150"
+}

@@ -1,0 +1,33 @@
+{
+  "provider": "OpenAI",
+  "family": "GPT-3",
+  "models": [
+    {
+      "id": "gpt-3-5-turbo",
+      "name": "GPT-3.5 Turbo",
+      "provider": "OpenAI",
+      "family": "GPT-3",
+      "pricing": {
+        "input_per_1m_tokens": 0.5,
+        "output_per_1m_tokens": 1.5,
+        "source": {
+          "url": "https://openai.com/api/pricing/",
+          "type": "primary",
+          "collected": "2024-12-31"
+        }
+      },
+      "benchmarks": {
+        "mmlu": {
+          "score": 70.0,
+          "source": {
+            "url": "https://platform.openai.com/docs/models/gpt-3-5-turbo",
+            "type": "estimated",
+            "collected": "2024-12-31",
+            "notes": "Estimated from community benchmarks"
+          }
+        }
+      }
+    }
+  ],
+  "last_updated": "2025-12-31T15:00:00.000000"
+}

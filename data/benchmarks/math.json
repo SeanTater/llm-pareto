@@ -1,0 +1,109 @@
+{
+  "category": "math",
+  "benchmarks": {
+    "gsm8k": {
+      "name": "GSM8K",
+      "full_name": "Grade School Math 8K",
+      "description": "Tests mathematical reasoning on grade school word problems requiring multi-step solutions",
+      "category": "math",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "aime": {
+      "name": "AIME",
+      "full_name": "American Invitational Mathematics Examination",
+      "description": "Competition-level mathematics problems requiring advanced problem-solving skills",
+      "category": "math",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "aime2025": {
+      "name": "AIME 2025",
+      "full_name": "AIME 2025",
+      "description": "Latest AIME problems from 2025 with tool use allowed for computation",
+      "category": "math",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "aime2025_no_tools": {
+      "name": "AIME 2025 (No Tools)",
+      "full_name": "AIME 2025 without Tool Use",
+      "description": "AIME 2025 problems evaluated without allowing external tools or computation aids",
+      "category": "math",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "aime24": {
+      "name": "AIME'24",
+      "full_name": "AIME 2024",
+      "description": "AIME problems from 2024 testing mathematical reasoning and problem-solving",
+      "category": "math",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "aime25": {
+      "name": "AIME'25",
+      "full_name": "AIME 2025",
+      "description": "AIME problems from 2025 testing mathematical reasoning and problem-solving",
+      "category": "math",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "frontiermath_tier1_3": {
+      "name": "FrontierMath (Tier 1-3)",
+      "full_name": "FrontierMath Tiers 1-3",
+      "description": "Advanced mathematics problems at the frontier of mathematical research (easier tiers)",
+      "category": "math",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "frontiermath_tier4": {
+      "name": "FrontierMath (Tier 4)",
+      "full_name": "FrontierMath Tier 4",
+      "description": "Most challenging advanced mathematics problems at the frontier of research",
+      "category": "math",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "hmmt_feb_2025": {
+      "name": "HMMT Feb 2025",
+      "full_name": "Harvard-MIT Mathematics Tournament February 2025",
+      "description": "Competition mathematics problems from HMMT February 2025",
+      "category": "math",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "aime2025_with_code": {
+      "name": "AIME 2025 (with code)",
+      "full_name": "AIME 2025 with Code Execution",
+      "description": "American Invitational Mathematics Examination with code execution allowed",
+      "category": "math",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "math_maj_1": {
+      "name": "MATH Maj@1",
+      "full_name": "MATH Majority Vote @ 1",
+      "description": "Mathematical reasoning benchmark with majority voting for answer verification",
+      "category": "math",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "math_cot_2shot": {
+      "name": "MATH CoT 2-Shot",
+      "full_name": "MATH Chain-of-Thought 2-Shot",
+      "description": "Mathematical reasoning with 2-shot chain-of-thought prompting",
+      "category": "math",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "amc": {
+      "name": "AMC",
+      "full_name": "American Mathematics Competition",
+      "description": "High school mathematics competition problems testing problem-solving skills",
+      "category": "math",
+      "scale": "0-100%",
+      "higher_is_better": true
+    }
+  }
+}

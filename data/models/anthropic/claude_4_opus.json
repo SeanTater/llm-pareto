@@ -1,0 +1,201 @@
+{
+  "provider": "Anthropic",
+  "family": "Claude",
+  "generation": 4,
+  "variant": "opus",
+  "models": [
+    {
+      "id": "claude-opus-4-5",
+      "name": "Claude Opus 4.5",
+      "provider": "Anthropic",
+      "family": "Claude",
+      "pricing": {
+        "input_per_1m_tokens": 5.0,
+        "output_per_1m_tokens": 25.0,
+        "source": {
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "claude-opus-4",
+      "name": "Claude Opus 4",
+      "provider": "Anthropic",
+      "family": "Claude",
+      "benchmarks": {
+        "swebench_verified": {
+          "score": 72.5,
+          "source": {
+            "url": "https://www.anthropic.com/news/claude-4",
+            "type": "primary",
+            "collected": "2025-12-31",
+            "notes": "pass@1, without extended thinking"
+          }
+        },
+        "terminalbench": {
+          "score": 43.2,
+          "source": {
+            "url": "https://www.anthropic.com/news/claude-4",
+            "type": "primary",
+            "collected": "2025-12-31",
+            "notes": "without extended thinking"
+          }
+        },
+        "gpqa_diamond": {
+          "score": 74.9,
+          "source": {
+            "url": "https://www.anthropic.com/news/claude-4",
+            "type": "primary",
+            "collected": "2025-12-31",
+            "notes": "without extended thinking"
+          }
+        },
+        "mmmlu": {
+          "score": 87.4,
+          "source": {
+            "url": "https://www.anthropic.com/news/claude-4",
+            "type": "primary",
+            "collected": "2025-12-31",
+            "notes": "without extended thinking"
+          }
+        },
+        "mmmu": {
+          "score": 73.7,
+          "source": {
+            "url": "https://www.anthropic.com/news/claude-4",
+            "type": "primary",
+            "collected": "2025-12-31",
+            "notes": "without extended thinking"
+          }
+        },
+        "aime": {
+          "score": 33.9,
+          "source": {
+            "url": "https://www.anthropic.com/news/claude-4",
+            "type": "primary",
+            "collected": "2025-12-31",
+            "notes": "without extended thinking"
+          }
+        }
+      },
+      "pricing": {
+        "input_per_1m_tokens": 15.0,
+        "output_per_1m_tokens": 75.0,
+        "source": {
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      }
+    },
+    {
+      "id": "claude-opus-4-1",
+      "name": "Claude Opus 4.1",
+      "provider": "Anthropic",
+      "family": "Claude",
+      "benchmarks": {
+        "swebench_verified": {
+          "score": 74.5,
+          "source": {
+            "url": "https://www.anthropic.com/news/claude-opus-4-5",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "terminalbench": {
+          "score": 46.5,
+          "source": {
+            "url": "https://www.anthropic.com/news/claude-opus-4-5",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "tau2bench_retail": {
+          "score": 86.8,
+          "source": {
+            "url": "https://www.anthropic.com/news/claude-opus-4-5",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "tau2bench_airline": {
+          "score": 63.0,
+          "source": {
+            "url": "https://www.anthropic.com/news/claude-opus-4-5",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "tau2bench_telecom": {
+          "score": 71.5,
+          "source": {
+            "url": "https://www.anthropic.com/news/claude-opus-4-5",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "osworld": {
+          "score": 44.4,
+          "source": {
+            "url": "https://www.anthropic.com/news/claude-opus-4-5",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "aime2025": {
+          "score": 78.0,
+          "source": {
+            "url": "https://www.anthropic.com/news/claude-opus-4-5",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "gpqa_diamond": {
+          "score": 81.0,
+          "source": {
+            "url": "https://www.anthropic.com/news/claude-opus-4-5",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "mmmlu": {
+          "score": 89.5,
+          "source": {
+            "url": "https://www.anthropic.com/news/claude-opus-4-5",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "mmmu": {
+          "score": 77.1,
+          "source": {
+            "url": "https://www.anthropic.com/news/claude-opus-4-5",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "finance_agent": {
+          "score": 50.9,
+          "source": {
+            "url": "https://www.anthropic.com/news/claude-opus-4-5",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        }
+      },
+      "pricing": {
+        "input_per_1m_tokens": 15.0,
+        "output_per_1m_tokens": 75.0,
+        "source": {
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      }
+    }
+  ],
+  "last_updated": "2025-12-31T15:00:00.000000"
+}

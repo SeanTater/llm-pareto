@@ -1,0 +1,599 @@
+{
+  "provider": "Mistral",
+  "models": [
+    {
+      "id": "mistral-large-3",
+      "name": "Mistral Large 3",
+      "provider": "Mistral",
+      "family": "Mistral",
+      "active_parameters_billions": 41,
+      "parameters_billions": 675,
+      "parameters_source": {
+        "url": "https://mistral.ai/news/mistral-3",
+        "type": "official",
+        "collected": "2025-12-31",
+        "notes": "Sparse mixture-of-experts: 41B active / 675B total"
+      },
+      "benchmarks": {
+        "mmmlu": {
+          "score": 85.5,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31",
+            "notes": "8-language average"
+          }
+        },
+        "gpqa_diamond": {
+          "score": 43.9,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31",
+            "notes": "5-shot, no CoT"
+          }
+        },
+        "simpleqa_verified": {
+          "score": 23.8,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31",
+            "notes": "Exact match"
+          }
+        },
+        "amc": {
+          "score": 52.0,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "livecodebench": {
+          "score": 34.4,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31",
+            "notes": "No CoT"
+          }
+        },
+        "lmarena_elo": {
+          "score": 1418,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        }
+      }
+    },
+    {
+      "id": "ministral-3b-base",
+      "name": "Ministral 3B Base",
+      "provider": "Mistral",
+      "family": "Ministral",
+      "parameters_billions": 3,
+      "parameters_source": {
+        "url": "https://mistral.ai/news/mistral-3",
+        "type": "official",
+        "collected": "2025-12-31"
+      },
+      "benchmarks": {
+        "math_cot_2shot": {
+          "score": 60.1,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "mmlu_redux_5shot": {
+          "score": 73.5,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "triviaqa_5shot": {
+          "score": 59.2,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "mmmlu": {
+          "score": 65.2,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31",
+            "notes": "5-shot"
+          }
+        }
+      }
+    },
+    {
+      "id": "ministral-3b-instruct",
+      "name": "Ministral 3B Instruct",
+      "provider": "Mistral",
+      "family": "Ministral",
+      "parameters_billions": 3,
+      "parameters_source": {
+        "url": "https://mistral.ai/news/mistral-3",
+        "type": "official",
+        "collected": "2025-12-31"
+      },
+      "benchmarks": {
+        "wildbench": {
+          "score": 56.8,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "arenahard": {
+          "score": 30.5,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "math_maj_1": {
+          "score": 83.0,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "mm_mt_bench": {
+          "score": 78.3,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31",
+            "notes": "Multimodal"
+          }
+        },
+        "gpqa_diamond": {
+          "score": 40.0,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31",
+            "notes": "Approximate from efficiency chart"
+          }
+        }
+      }
+    },
+    {
+      "id": "ministral-3b-thinking",
+      "name": "Ministral 3B Thinking",
+      "provider": "Mistral",
+      "family": "Ministral",
+      "parameters_billions": 3,
+      "parameters_source": {
+        "url": "https://mistral.ai/news/mistral-3",
+        "type": "official",
+        "collected": "2025-12-31"
+      },
+      "benchmarks": {
+        "aime25": {
+          "score": 72.1,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "livecodebench": {
+          "score": 54.8,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "gpqa_diamond": {
+          "score": 53.4,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "hmmt_feb_2025": {
+          "score": 51.7,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        }
+      }
+    },
+    {
+      "id": "ministral-8b-base",
+      "name": "Ministral 8B Base",
+      "provider": "Mistral",
+      "family": "Ministral",
+      "parameters_billions": 8,
+      "parameters_source": {
+        "url": "https://mistral.ai/news/mistral-3",
+        "type": "official",
+        "collected": "2025-12-31"
+      },
+      "benchmarks": {
+        "math_cot_2shot": {
+          "score": 62.6,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "mmlu_redux_5shot": {
+          "score": 79.3,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "triviaqa_5shot": {
+          "score": 68.1,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "mmmlu": {
+          "score": 70.6,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31",
+            "notes": "5-shot"
+          }
+        }
+      }
+    },
+    {
+      "id": "ministral-8b-instruct",
+      "name": "Ministral 8B Instruct",
+      "provider": "Mistral",
+      "family": "Ministral",
+      "parameters_billions": 8,
+      "parameters_source": {
+        "url": "https://mistral.ai/news/mistral-3",
+        "type": "official",
+        "collected": "2025-12-31"
+      },
+      "benchmarks": {
+        "wildbench": {
+          "score": 66.8,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "arenahard": {
+          "score": 50.9,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "math_maj_1": {
+          "score": 87.6,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "mm_mt_bench": {
+          "score": 80.8,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31",
+            "notes": "Multimodal"
+          }
+        },
+        "gpqa_diamond": {
+          "score": 50.0,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31",
+            "notes": "Approximate from efficiency chart"
+          }
+        }
+      }
+    },
+    {
+      "id": "ministral-8b-thinking",
+      "name": "Ministral 8B Thinking",
+      "provider": "Mistral",
+      "family": "Ministral",
+      "parameters_billions": 8,
+      "parameters_source": {
+        "url": "https://mistral.ai/news/mistral-3",
+        "type": "official",
+        "collected": "2025-12-31"
+      },
+      "benchmarks": {
+        "aime25": {
+          "score": 78.7,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "livecodebench": {
+          "score": 61.6,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "gpqa_diamond": {
+          "score": 66.8,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "hmmt_feb_2025": {
+          "score": 55.8,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        }
+      }
+    },
+    {
+      "id": "ministral-14b-base",
+      "name": "Ministral 14B Base",
+      "provider": "Mistral",
+      "family": "Ministral",
+      "parameters_billions": 14,
+      "parameters_source": {
+        "url": "https://mistral.ai/news/mistral-3",
+        "type": "official",
+        "collected": "2025-12-31"
+      },
+      "benchmarks": {
+        "math_cot_2shot": {
+          "score": 67.6,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "mmlu_redux_5shot": {
+          "score": 82.0,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "triviaqa_5shot": {
+          "score": 74.9,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "mmmlu": {
+          "score": 74.2,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31",
+            "notes": "5-shot"
+          }
+        }
+      }
+    },
+    {
+      "id": "ministral-14b-instruct",
+      "name": "Ministral 14B Instruct",
+      "provider": "Mistral",
+      "family": "Ministral",
+      "parameters_billions": 14,
+      "parameters_source": {
+        "url": "https://mistral.ai/news/mistral-3",
+        "type": "official",
+        "collected": "2025-12-31"
+      },
+      "benchmarks": {
+        "wildbench": {
+          "score": 68.5,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "arenahard": {
+          "score": 55.1,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "math_maj_1": {
+          "score": 90.4,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "mm_mt_bench": {
+          "score": 84.9,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31",
+            "notes": "Multimodal"
+          }
+        },
+        "gpqa_diamond": {
+          "score": 55.0,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31",
+            "notes": "Approximate from efficiency chart"
+          }
+        }
+      }
+    },
+    {
+      "id": "ministral-14b-thinking",
+      "name": "Ministral 14B Thinking",
+      "provider": "Mistral",
+      "family": "Ministral",
+      "parameters_billions": 14,
+      "parameters_source": {
+        "url": "https://mistral.ai/news/mistral-3",
+        "type": "official",
+        "collected": "2025-12-31"
+      },
+      "benchmarks": {
+        "aime25": {
+          "score": 85.0,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "livecodebench": {
+          "score": 64.6,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "gpqa_diamond": {
+          "score": 71.2,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "hmmt_feb_2025": {
+          "score": 67.5,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        }
+      }
+    },
+    {
+      "id": "devstral-2",
+      "name": "Devstral 2",
+      "provider": "Mistral",
+      "family": "Devstral",
+      "parameters_billions": 123,
+      "parameters_source": {
+        "url": "https://ollama.com/library/devstral-2",
+        "type": "official",
+        "collected": "2025-12-31",
+        "notes": "123B parameters"
+      },
+      "benchmarks": {
+        "swebench_verified": {
+          "score": 72.2,
+          "source": {
+            "url": "https://ollama.com/library/devstral-2",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        },
+        "swebench_multilingual": {
+          "score": 61.3,
+          "source": {
+            "url": "https://ollama.com/library/devstral-2",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        },
+        "terminalbench_2_0": {
+          "score": 40.5,
+          "source": {
+            "url": "https://ollama.com/library/devstral-2",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        }
+      }
+    },
+    {
+      "id": "devstral-2-small",
+      "name": "Devstral 2 Small",
+      "provider": "Mistral",
+      "family": "Devstral",
+      "parameters_billions": 24,
+      "parameters_source": {
+        "url": "https://ollama.com/library/devstral-2",
+        "type": "official",
+        "collected": "2025-12-31",
+        "notes": "24B parameters"
+      },
+      "benchmarks": {
+        "swebench_verified": {
+          "score": 65.8,
+          "source": {
+            "url": "https://ollama.com/library/devstral-2",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        },
+        "swebench_multilingual": {
+          "score": 51.6,
+          "source": {
+            "url": "https://ollama.com/library/devstral-2",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        },
+        "terminalbench_2_0": {
+          "score": 32.0,
+          "source": {
+            "url": "https://ollama.com/library/devstral-2",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        }
+      }
+    }
+  ],
+  "last_updated": "2026-01-01T10:08:57.177655"
+}

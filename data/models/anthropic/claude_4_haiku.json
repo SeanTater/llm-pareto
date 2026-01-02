@@ -1,0 +1,32 @@
+{
+  "provider": "Anthropic",
+  "family": "Claude",
+  "generation": 4,
+  "variant": "haiku",
+  "models": [
+    {
+      "id": "claude-haiku-4",
+      "name": "Claude Haiku 4",
+      "provider": "Anthropic",
+      "family": "Claude",
+      "benchmarks": {}
+    },
+    {
+      "id": "claude-haiku-4-5",
+      "name": "Claude Haiku 4.5",
+      "provider": "Anthropic",
+      "family": "Claude",
+      "pricing": {
+        "input_per_1m_tokens": 1.0,
+        "output_per_1m_tokens": 5.0,
+        "source": {
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    }
+  ],
+  "last_updated": "2025-12-31T15:00:00.000000"
+}

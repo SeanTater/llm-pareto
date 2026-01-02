@@ -1,0 +1,39 @@
+{
+  "provider": "OpenAI",
+  "family": "GPT-5",
+  "models": [
+    {
+      "id": "gpt-5-mini",
+      "name": "GPT-5 Mini",
+      "provider": "OpenAI",
+      "family": "GPT-5",
+      "pricing": {
+        "input_per_1m_tokens": 0.25,
+        "output_per_1m_tokens": 2.0,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gpt-5-nano",
+      "name": "GPT-5 Nano",
+      "provider": "OpenAI",
+      "family": "GPT-5",
+      "pricing": {
+        "input_per_1m_tokens": 0.05,
+        "output_per_1m_tokens": 0.4,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    }
+  ],
+  "last_updated": "2025-12-31T15:00:00.000000"
+}

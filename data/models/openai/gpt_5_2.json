@@ -1,0 +1,39 @@
+{
+  "provider": "OpenAI",
+  "family": "GPT-5",
+  "models": [
+    {
+      "id": "gpt-5-2",
+      "name": "GPT-5.2",
+      "provider": "OpenAI",
+      "family": "GPT-5",
+      "pricing": {
+        "input_per_1m_tokens": 1.75,
+        "output_per_1m_tokens": 14.0,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gpt-5-2-chat-latest",
+      "name": "GPT-5.2 Chat Latest",
+      "provider": "OpenAI",
+      "family": "GPT-5",
+      "pricing": {
+        "input_per_1m_tokens": 1.75,
+        "output_per_1m_tokens": 14.0,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    }
+  ],
+  "last_updated": "2025-12-31T15:00:00.000000"
+}

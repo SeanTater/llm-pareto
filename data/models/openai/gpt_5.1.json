@@ -1,0 +1,134 @@
+{
+  "provider": "OpenAI",
+  "family": "GPT-5",
+  "models": [
+    {
+      "id": "gpt-5-1-thinking",
+      "name": "GPT-5.1 Thinking",
+      "provider": "OpenAI",
+      "family": "GPT-5"
+    },
+    {
+      "id": "gpt-5-1-codex-max",
+      "name": "GPT 5.1 Codex Max",
+      "provider": "OpenAI",
+      "family": "GPT-5",
+      "benchmarks": {
+        "swebench_verified": {
+          "score": 77.9,
+          "source": {
+            "url": "https://ollama.com/library/devstral-2",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        },
+        "terminalbench_2_0": {
+          "score": 58.1,
+          "source": {
+            "url": "https://ollama.com/library/devstral-2",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        }
+      },
+      "pricing": {
+        "input_per_1m_tokens": 1.25,
+        "output_per_1m_tokens": 10.0,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      }
+    },
+    {
+      "id": "gpt-5-1-codex-high",
+      "name": "GPT 5.1 Codex High",
+      "provider": "OpenAI",
+      "family": "GPT-5",
+      "benchmarks": {
+        "swebench_verified": {
+          "score": 73.7,
+          "source": {
+            "url": "https://ollama.com/library/devstral-2",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        },
+        "terminalbench_2_0": {
+          "score": 52.8,
+          "source": {
+            "url": "https://ollama.com/library/devstral-2",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        }
+      }
+    },
+    {
+      "id": "gpt-5-1",
+      "name": "GPT-5.1",
+      "provider": "OpenAI",
+      "family": "GPT-5",
+      "pricing": {
+        "input_per_1m_tokens": 1.25,
+        "output_per_1m_tokens": 10.0,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gpt-5-1-chat-latest",
+      "name": "GPT-5.1 Chat Latest",
+      "provider": "OpenAI",
+      "family": "GPT-5",
+      "pricing": {
+        "input_per_1m_tokens": 1.25,
+        "output_per_1m_tokens": 10.0,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gpt-5-1-codex",
+      "name": "GPT-5.1 Codex",
+      "provider": "OpenAI",
+      "family": "GPT-5",
+      "pricing": {
+        "input_per_1m_tokens": 1.25,
+        "output_per_1m_tokens": 10.0,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gpt-5-1-codex-mini",
+      "name": "GPT-5.1 Codex Mini",
+      "provider": "OpenAI",
+      "family": "GPT-5",
+      "pricing": {
+        "input_per_1m_tokens": 0.25,
+        "output_per_1m_tokens": 2.0,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    }
+  ],
+  "last_updated": "2026-01-01T11:05:03.644935"
+}

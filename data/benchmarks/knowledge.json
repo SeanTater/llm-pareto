@@ -1,0 +1,285 @@
+{
+  "category": "knowledge",
+  "benchmarks": {
+    "mmlu": {
+      "name": "MMLU",
+      "full_name": "Massive Multitask Language Understanding",
+      "description": "Tests general knowledge across 57 subjects including STEM, humanities, and social sciences",
+      "category": "knowledge",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "mmmlu": {
+      "name": "MMMLU",
+      "full_name": "Multilingual MMLU",
+      "description": "Multilingual version of MMLU testing knowledge across diverse languages and cultures",
+      "category": "knowledge",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "mmmu": {
+      "name": "MMMU",
+      "full_name": "Massive Multi-discipline Multimodal Understanding",
+      "description": "Tests multimodal understanding across diverse academic disciplines with images and text",
+      "category": "knowledge",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "gpqa": {
+      "name": "GPQA",
+      "full_name": "Graduate-Level Google-Proof Q&A Benchmark",
+      "description": "Expert-level science questions requiring deep reasoning, resistant to simple search",
+      "category": "knowledge",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "gpqa_diamond": {
+      "name": "GPQA Diamond",
+      "full_name": "GPQA Diamond Subset",
+      "description": "Highest quality subset of GPQA with expert-vetted graduate-level science questions",
+      "category": "knowledge",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "arenahard": {
+      "name": "ArenaHard",
+      "full_name": "Arena Hard",
+      "description": "Challenging set of user queries from Chatbot Arena requiring complex reasoning and instruction following",
+      "category": "knowledge",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "livebench": {
+      "name": "LiveBench",
+      "full_name": "LiveBench",
+      "description": "Continuously updated benchmark with recent questions to prevent contamination and test real capabilities",
+      "category": "knowledge",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "charxiv_reasoning": {
+      "name": "CharXiv-Reasoning",
+      "full_name": "CharXiv Scientific Figure Reasoning",
+      "description": "Tests ability to interpret and reason about scientific figures from research papers",
+      "category": "knowledge",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "videommmu": {
+      "name": "VideoMMMU",
+      "full_name": "Video-based Multimodal Reasoning",
+      "description": "Evaluates multimodal understanding and reasoning on video content with up to 256 frames",
+      "category": "knowledge",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "mmmu_pro": {
+      "name": "MMMU Pro",
+      "full_name": "Graduate-level Visual Problem-Solving",
+      "description": "Advanced multimodal understanding benchmark testing graduate-level visual problem-solving skills",
+      "category": "knowledge",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "erqa": {
+      "name": "ERQA",
+      "full_name": "Multimodal Spatial Reasoning",
+      "description": "Tests spatial reasoning capabilities across multimodal inputs",
+      "category": "knowledge",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "healthbench": {
+      "name": "HealthBench",
+      "full_name": "Realistic Health Conversations",
+      "description": "Evaluates performance on realistic health-related conversations and medical queries",
+      "category": "knowledge",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "healthbench_hard": {
+      "name": "HealthBench Hard",
+      "full_name": "Challenging Health Conversations",
+      "description": "Tests ability to handle challenging health conversations with complex medical scenarios",
+      "category": "knowledge",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "healthbench_hard_hallucinations": {
+      "name": "HealthBench Hard Hallucinations",
+      "full_name": "Hallucination Rate on Challenging Health Conversations",
+      "description": "Measures inaccuracy rate on challenging health conversations (lower is better)",
+      "category": "knowledge",
+      "scale": "0-20%",
+      "higher_is_better": false
+    },
+    "arc_agi_1": {
+      "name": "ARC-AGI-1 (Verified)",
+      "full_name": "Abstraction and Reasoning Corpus AGI-1",
+      "description": "Abstract reasoning benchmark testing fluid intelligence and pattern recognition",
+      "category": "knowledge",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "arc_agi_2": {
+      "name": "ARC-AGI-2 (Verified)",
+      "full_name": "Abstraction and Reasoning Corpus AGI-2",
+      "description": "Advanced abstract reasoning benchmark with more challenging patterns",
+      "category": "knowledge",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "chatgpt_no_errors_with_search": {
+      "name": "ChatGPT No Errors (with search)",
+      "full_name": "ChatGPT Answers Without Errors (with search)",
+      "description": "Factual accuracy on ChatGPT queries with search enabled",
+      "category": "knowledge",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "chatgpt_no_errors_no_search": {
+      "name": "ChatGPT No Errors (no search)",
+      "full_name": "ChatGPT Answers Without Errors (no search)",
+      "description": "Factual accuracy on ChatGPT queries without search",
+      "category": "knowledge",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "openai_mrcr_v2": {
+      "name": "OpenAI MRCRv2",
+      "full_name": "OpenAI Multi-needle Retrieval in Context Revision v2",
+      "description": "Long context retrieval benchmark with multiple needles across varying context lengths",
+      "category": "knowledge",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "graphwalks_bfs": {
+      "name": "GraphWalks BFS",
+      "full_name": "GraphWalks Breadth-First Search",
+      "description": "Graph traversal and reasoning using breadth-first search patterns",
+      "category": "knowledge",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "graphwalks_parents": {
+      "name": "GraphWalks Parents",
+      "full_name": "GraphWalks Parent Node Identification",
+      "description": "Graph reasoning benchmark for identifying parent nodes in hierarchies",
+      "category": "knowledge",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "screenspot_pro": {
+      "name": "Screenspot Pro",
+      "full_name": "Screenspot Pro UI Understanding",
+      "description": "Advanced UI element detection and interaction in screenshots",
+      "category": "knowledge",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "hle": {
+      "name": "HLE",
+      "full_name": "Hard Long-form Evaluation",
+      "description": "Challenging long-form reasoning and analysis tasks",
+      "category": "knowledge",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "hle_with_tools": {
+      "name": "HLE (with tools)",
+      "full_name": "Humanity's Last Exam with Search and Code",
+      "description": "Academic reasoning benchmark with access to search and code execution tools",
+      "category": "knowledge",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "omnidocbench_1_5": {
+      "name": "OmniDocBench 1.5",
+      "full_name": "OmniDocBench 1.5 OCR",
+      "description": "Overall edit distance metric for OCR quality across document types (lower is better)",
+      "category": "knowledge",
+      "scale": "Edit Distance",
+      "higher_is_better": false
+    },
+    "facts_benchmark": {
+      "name": "FACTS Benchmark",
+      "full_name": "FACTS Benchmark Suite",
+      "description": "Factuality benchmark across grounding, parametric, search, and multimodal tasks",
+      "category": "knowledge",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "simpleqa_verified": {
+      "name": "SimpleQA Verified",
+      "full_name": "SimpleQA Verified",
+      "description": "Parametric knowledge benchmark testing factual accuracy on simple questions",
+      "category": "knowledge",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "global_piqa": {
+      "name": "Global PIQA",
+      "full_name": "Global Physical Interaction QA",
+      "description": "Commonsense reasoning across 100 languages and cultures",
+      "category": "knowledge",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "mrcr_v2_128k": {
+      "name": "MRCR v2 (128k)",
+      "full_name": "MRCR v2 8-needle at 128k context",
+      "description": "Long context performance benchmark with 8 needles at 128k context length",
+      "category": "knowledge",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "mrcr_v2_1m": {
+      "name": "MRCR v2 (1M)",
+      "full_name": "MRCR v2 8-needle at 1M context",
+      "description": "Long context performance benchmark with 8 needles at 1M context length (pointwise)",
+      "category": "knowledge",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "wildbench": {
+      "name": "WildBench",
+      "full_name": "WildBench",
+      "description": "Real-world conversational benchmark testing instruction following across diverse user prompts",
+      "category": "knowledge",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "mm_mt_bench": {
+      "name": "MM-MT-Bench",
+      "full_name": "Multimodal Multi-Turn Benchmark",
+      "description": "Multimodal conversation benchmark testing vision and language understanding over multiple turns",
+      "category": "knowledge",
+      "scale": "0-100",
+      "higher_is_better": true
+    },
+    "mmlu_redux_5shot": {
+      "name": "MMLU Redux 5-Shot",
+      "full_name": "MMLU Redux 5-Shot",
+      "description": "Revised MMLU benchmark with 5-shot prompting across 57 subjects",
+      "category": "knowledge",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "triviaqa_5shot": {
+      "name": "TriviaQA 5-Shot",
+      "full_name": "TriviaQA 5-Shot",
+      "description": "Question answering benchmark with 5-shot prompting on trivia questions",
+      "category": "knowledge",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "lmarena_elo": {
+      "name": "LMArena ELO",
+      "full_name": "LMArena ELO Score",
+      "description": "ELO rating from LMArena crowdsourced human preference evaluations",
+      "category": "knowledge",
+      "scale": "1000-1600",
+      "higher_is_better": true
+    }
+  }
+}

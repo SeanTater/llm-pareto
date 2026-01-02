@@ -1,0 +1,94 @@
+{
+  "provider": "Moonshot",
+  "models": [
+    {
+      "id": "kimi-k2",
+      "name": "Kimi K2",
+      "provider": "Moonshot",
+      "family": "Kimi",
+      "benchmarks": {
+        "mmmlu": {
+          "score": 83.5,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        },
+        "gpqa_diamond": {
+          "score": 35.6,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        },
+        "simpleqa_verified": {
+          "score": 26.0,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        },
+        "amc": {
+          "score": 54.4,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        },
+        "livecodebench": {
+          "score": 40.2,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        },
+        "lmarena_elo": {
+          "score": 1418,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        }
+      }
+    },
+    {
+      "id": "kimi-k2-thinking",
+      "name": "Kimi K2 Thinking",
+      "provider": "Moonshot",
+      "family": "Kimi",
+      "benchmarks": {
+        "swebench_verified": {
+          "score": 71.3,
+          "source": {
+            "url": "https://ollama.com/library/devstral-2",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        },
+        "swebench_multilingual": {
+          "score": 61.1,
+          "source": {
+            "url": "https://ollama.com/library/devstral-2",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        },
+        "terminalbench_2_0": {
+          "score": 35.7,
+          "source": {
+            "url": "https://ollama.com/library/devstral-2",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        }
+      }
+    }
+  ],
+  "last_updated": "2026-01-01T10:14:51.089375"
+}

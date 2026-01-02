@@ -25,20 +25,29 @@ The Pareto frontier highlights the most efficient models—those that achieve th
 llm-pareto/
 ├── index.html              # Main page
 ├── css/styles.css          # Styling
-├── js/app.js               # All frontend logic
+├── js/app.js               # Application logic
 ├── data/
-│   ├── models.json         # Model data with citations
-│   └── sources.json        # Source configurations for automation
-└── scripts/                # Data collection (not deployed)
-    ├── collect_data.py     # Main orchestrator
-    ├── llm_parser.py       # LLM-based parsing
-    ├── validate.py         # Data quality checks
-    └── scrapers/           # Individual scrapers
+│   ├── manifest.json       # List of all model files
+│   ├── benchmarks/         # Benchmark definitions by category
+│   │   ├── categories.json
+│   │   ├── knowledge.json
+│   │   ├── coding.json
+│   │   ├── math.json
+│   │   └── agentic.json
+│   └── models/             # Model data organized by provider
+│       ├── google.json
+│       ├── meta.json
+│       ├── openai/         # OpenAI models split by generation
+│       ├── anthropic/      # Anthropic models split by generation
+│       └── qwen/           # Qwen models
+├── manage_data.py          # Data management script
+├── CLAUDE.md               # Instructions for AI assistant
+└── README.md               # This file
 ```
 
 ## Data Schema
 
-Each model in `data/models.json` includes:
+Each model in the provider files under `data/models/` includes:
 - **Metadata**: Name, provider, family, parameter count
 - **Benchmarks**: Scores with citations (URL, type, collection date)
 - **Pricing**: Input/output costs with source
@@ -85,17 +94,25 @@ Example:
 
 ### Update Data
 
-#### Manual Updates
-Edit `data/models.json` directly in GitHub or locally, then commit and push.
-
-#### Automated Updates (Local)
-Run the Python scripts weekly via systemd:
+Use the `manage_data.py` script to add benchmarks and models with validation:
 
 ```bash
-# Set up systemd timer (see scripts/README.md)
-systemctl --user enable llm-pareto-update.timer
-systemctl --user start llm-pareto-update.timer
+# Add benchmarks (dry-run first to preview)
+python manage_data.py add-benchmarks benchmarks.json --dry-run
+python manage_data.py add-benchmarks benchmarks.json
+
+# Add models (dry-run first to preview)
+python manage_data.py add-models /tmp/models.json --dry-run
+python manage_data.py add-models /tmp/models.json
+
+# Validate entire dataset
+python manage_data.py validate
+
+# See --help for options
+python manage_data.py --help
 ```
+
+For detailed input formats and examples, see `CLAUDE.md`.
 
 ## Data Sources
 
@@ -110,7 +127,7 @@ Contributions welcome! Please ensure:
 1. All data points include citations with URLs and dates
 2. Prefer primary sources (provider blogs, papers) over aggregators
 3. Validate against official leaderboards before submitting
-4. Update `last_updated` timestamp in `models.json`
+4. Update `last_updated` timestamp in the provider file you touched
 
 ## License
 

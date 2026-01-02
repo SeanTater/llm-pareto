@@ -1,0 +1,107 @@
+{
+  "provider": "DeepSeek",
+  "models": [
+    {
+      "id": "deepseek-3-1",
+      "name": "DeepSeek 3.1",
+      "provider": "DeepSeek",
+      "family": "DeepSeek",
+      "parameters_billions": 670,
+      "parameters_source": {
+        "url": "https://mistral.ai/news/mistral-3",
+        "type": "official",
+        "collected": "2025-12-31",
+        "notes": "From Mistral comparison charts - 670B total"
+      },
+      "benchmarks": {
+        "mmmlu": {
+          "score": 84.2,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        },
+        "gpqa_diamond": {
+          "score": 41.9,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        },
+        "simpleqa_verified": {
+          "score": 19.7,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        },
+        "amc": {
+          "score": 46.4,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        },
+        "livecodebench": {
+          "score": 35.6,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        },
+        "lmarena_elo": {
+          "score": 1423,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        }
+      }
+    },
+    {
+      "id": "deepseek-v3-2",
+      "name": "DeepSeek v3.2",
+      "provider": "DeepSeek",
+      "family": "DeepSeek",
+      "parameters_billions": 671,
+      "parameters_source": {
+        "url": "https://ollama.com/library/devstral-2",
+        "type": "official",
+        "collected": "2025-12-31"
+      },
+      "benchmarks": {
+        "swebench_verified": {
+          "score": 73.1,
+          "source": {
+            "url": "https://ollama.com/library/devstral-2",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        },
+        "swebench_multilingual": {
+          "score": 70.2,
+          "source": {
+            "url": "https://ollama.com/library/devstral-2",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        },
+        "terminalbench_2_0": {
+          "score": 46.4,
+          "source": {
+            "url": "https://ollama.com/library/devstral-2",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        }
+      }
+    }
+  ],
+  "last_updated": "2026-01-01T10:14:51.054218"
+}

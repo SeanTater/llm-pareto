@@ -1,0 +1,173 @@
+{
+  "category": "agentic",
+  "benchmarks": {
+    "swebench_verified": {
+      "name": "SWE-bench Verified",
+      "full_name": "SWE-bench Verified",
+      "description": "Tests real-world software engineering tasks like bug fixing and feature implementation in popular GitHub repos",
+      "category": "agentic",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "terminalbench": {
+      "name": "Terminal-bench",
+      "full_name": "Terminal Benchmark",
+      "description": "Evaluates ability to complete complex terminal-based tasks requiring command-line expertise",
+      "category": "agentic",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "osworld": {
+      "name": "OSWorld",
+      "full_name": "OSWorld",
+      "description": "Tests ability to perform computer tasks across diverse operating system environments",
+      "category": "agentic",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "tau2bench_retail": {
+      "name": "\u03c42-bench (Retail)",
+      "full_name": "Tau-bench Retail Domain",
+      "description": "Customer service agent tasks in retail domain requiring multi-turn dialogue and tool use",
+      "category": "agentic",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "tau2bench_airline": {
+      "name": "\u03c42-bench (Airline)",
+      "full_name": "Tau-bench Airline Domain",
+      "description": "Customer service agent tasks in airline domain with booking systems and policy knowledge",
+      "category": "agentic",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "tau2bench_telecom": {
+      "name": "\u03c42-bench (Telecom)",
+      "full_name": "Tau-bench Telecom Domain",
+      "description": "Customer service agent tasks in telecommunications domain with technical troubleshooting",
+      "category": "agentic",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "finance_agent": {
+      "name": "Finance Agent",
+      "full_name": "Finance Agent Benchmark",
+      "description": "Tests ability to perform financial analysis and decision-making tasks with real-world data",
+      "category": "agentic",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "multiif": {
+      "name": "MultiIF",
+      "full_name": "Multi-step Instruction Following",
+      "description": "Evaluates following complex multi-step instructions across diverse task domains",
+      "category": "agentic",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "collie": {
+      "name": "COLLIE",
+      "full_name": "Instruction-Following in Freeform Writing",
+      "description": "Tests instruction-following capabilities in open-ended writing tasks",
+      "category": "agentic",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "browsecomp": {
+      "name": "BrowseComp",
+      "full_name": "Agentic Search and Browsing",
+      "description": "Evaluates agentic web browsing and information retrieval capabilities",
+      "category": "agentic",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "scale_multichallenge": {
+      "name": "Scale MultiChallenge",
+      "full_name": "Multi-turn Instruction Following",
+      "description": "Tests ability to follow complex instructions across multiple conversation turns",
+      "category": "agentic",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "gdpval": {
+      "name": "GDPval",
+      "full_name": "Knowledge Work Tasks Evaluation",
+      "description": "Evaluates performance on diverse knowledge work tasks with win/tie rate against baseline",
+      "category": "agentic",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "investment_banking_spreadsheet": {
+      "name": "Investment Banking Spreadsheet",
+      "full_name": "Investment Banking Spreadsheet Tasks",
+      "description": "Complex financial modeling and spreadsheet tasks from investment banking",
+      "category": "agentic",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "browsecomp_long_context_128k": {
+      "name": "BrowseComp Long 128k",
+      "full_name": "BrowseComp Long Context 128k",
+      "description": "Agentic browsing tasks with 128k context window",
+      "category": "agentic",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "browsecomp_long_context_256k": {
+      "name": "BrowseComp Long 256k",
+      "full_name": "BrowseComp Long Context 256k",
+      "description": "Agentic browsing tasks with 256k context window",
+      "category": "agentic",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "scale_mcp_atlas": {
+      "name": "Scale MCP-Atlas",
+      "full_name": "Scale MCP-Atlas Tool Usage",
+      "description": "Complex tool usage benchmark with multiple APIs and function calls",
+      "category": "agentic",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "toolathlon": {
+      "name": "Toolathlon",
+      "full_name": "Toolathlon Multi-Tool Usage",
+      "description": "Comprehensive benchmark testing ability to use diverse tools effectively",
+      "category": "agentic",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "terminalbench_2_0": {
+      "name": "Terminal-Bench 2.0",
+      "full_name": "Terminal-Bench 2.0 (Terminus-2)",
+      "description": "Agentic terminal coding tasks using Terminus-2 harness",
+      "category": "agentic",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "tau2bench": {
+      "name": "\u03c42-bench",
+      "full_name": "Tau-bench 2 Overall",
+      "description": "Agentic tool use benchmark across multiple domains",
+      "category": "agentic",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "vending_bench_2": {
+      "name": "Vending-Bench 2",
+      "full_name": "Vending-Bench 2 Net Worth",
+      "description": "Agentic long-term coherence benchmark measured by net worth accumulation",
+      "category": "agentic",
+      "scale": "Dollar Amount",
+      "higher_is_better": true
+    },
+    "swebench_multilingual": {
+      "name": "SWE-bench Multilingual",
+      "full_name": "SWE-bench Multilingual",
+      "description": "Real-world software engineering tasks across multiple programming languages and frameworks",
+      "category": "agentic",
+      "scale": "0-100%",
+      "higher_is_better": true
+    }
+  }
+}

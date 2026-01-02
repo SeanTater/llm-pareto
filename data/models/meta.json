@@ -1,0 +1,104 @@
+{
+  "provider": "Meta",
+  "models": [
+    {
+      "id": "llama-3-1-70b",
+      "name": "Llama 3.1 70B",
+      "provider": "Meta",
+      "family": "Llama",
+      "parameters_billions": 70,
+      "parameters_source": {
+        "url": "https://ai.meta.com/blog/meta-llama-3-1/",
+        "type": "primary",
+        "collected": "2024-07-23",
+        "notes": "Official parameter count"
+      },
+      "pricing": {
+        "input_per_1m_tokens": 0.99,
+        "output_per_1m_tokens": 0.99,
+        "source": {
+          "url": "https://www.together.ai/pricing",
+          "type": "secondary",
+          "collected": "2024-12-31",
+          "notes": "Third-party hosting pricing (Together AI)"
+        }
+      },
+      "benchmarks": {
+        "mmlu": {
+          "score": 83.6,
+          "source": {
+            "url": "https://ai.meta.com/blog/meta-llama-3-1/",
+            "type": "primary",
+            "collected": "2024-07-23"
+          }
+        },
+        "humaneval": {
+          "score": 80.5,
+          "source": {
+            "url": "https://ai.meta.com/blog/meta-llama-3-1/",
+            "type": "primary",
+            "collected": "2024-07-23"
+          }
+        },
+        "gsm8k": {
+          "score": 95.1,
+          "source": {
+            "url": "https://ai.meta.com/blog/meta-llama-3-1/",
+            "type": "primary",
+            "collected": "2024-07-23"
+          }
+        }
+      }
+    },
+    {
+      "id": "llama-3-1-405b",
+      "name": "Llama 3.1 405B",
+      "provider": "Meta",
+      "family": "Llama",
+      "parameters_billions": 405,
+      "parameters_source": {
+        "url": "https://ai.meta.com/blog/meta-llama-3-1/",
+        "type": "primary",
+        "collected": "2024-07-23",
+        "notes": "Official parameter count"
+      },
+      "pricing": {
+        "input_per_1m_tokens": 5.0,
+        "output_per_1m_tokens": 15.0,
+        "source": {
+          "url": "https://www.together.ai/pricing",
+          "type": "secondary",
+          "collected": "2024-12-31",
+          "notes": "Third-party hosting pricing (Together AI)"
+        }
+      },
+      "benchmarks": {
+        "mmlu": {
+          "score": 87.3,
+          "source": {
+            "url": "https://ai.meta.com/blog/meta-llama-3-1/",
+            "type": "primary",
+            "collected": "2024-07-23"
+          }
+        },
+        "humaneval": {
+          "score": 89.0,
+          "source": {
+            "url": "https://ai.meta.com/blog/meta-llama-3-1/",
+            "type": "primary",
+            "collected": "2024-07-23"
+          }
+        },
+        "gsm8k": {
+          "score": 96.8,
+          "source": {
+            "url": "https://ai.meta.com/blog/meta-llama-3-1/",
+            "type": "primary",
+            "collected": "2024-07-23"
+          }
+        }
+      }
+    }
+  ],
+  "last_updated": "2025-12-31T13:07:32.307933"
+}

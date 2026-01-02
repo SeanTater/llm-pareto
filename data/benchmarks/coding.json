@@ -1,0 +1,69 @@
+{
+  "category": "coding",
+  "benchmarks": {
+    "humaneval": {
+      "name": "HumanEval",
+      "full_name": "HumanEval",
+      "description": "Evaluates code generation from docstrings across 164 Python programming problems",
+      "category": "coding",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "livecodebench": {
+      "name": "LiveCodeBench",
+      "full_name": "LiveCodeBench",
+      "description": "Continuously updated coding benchmark with recent competitive programming problems",
+      "category": "coding",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "codeforces": {
+      "name": "CodeForces",
+      "full_name": "CodeForces ELO Rating",
+      "description": "Competitive programming rating based on solving algorithmic problems from CodeForces",
+      "category": "coding",
+      "scale": "ELO 1000-3000",
+      "higher_is_better": true
+    },
+    "aider": {
+      "name": "Aider",
+      "full_name": "Aider Code Editing Benchmark",
+      "description": "Tests ability to make targeted code edits and refactorings in existing codebases",
+      "category": "coding",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "bfcl": {
+      "name": "BFCL",
+      "full_name": "Berkeley Function Calling Leaderboard",
+      "description": "Evaluates function calling and tool use capabilities across diverse API scenarios",
+      "category": "coding",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "swebench_pro_public": {
+      "name": "SWE-Bench Pro (Public)",
+      "full_name": "SWE-Bench Pro Public Subset",
+      "description": "Advanced software engineering benchmark testing on public repository issues",
+      "category": "coding",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "swe_lancer_ic_diamond": {
+      "name": "SWE-Lancer IC Diamond",
+      "full_name": "SWE-Lancer Individual Contributor Diamond",
+      "description": "Real-world software engineering tasks at IC level difficulty",
+      "category": "coding",
+      "scale": "0-100%",
+      "higher_is_better": true
+    },
+    "livecodebench_pro": {
+      "name": "LiveCodeBench Pro",
+      "full_name": "LiveCodeBench Pro (Elo Rating)",
+      "description": "Competitive coding problems from Codeforces, ICPC, and IOI with Elo rating system",
+      "category": "coding",
+      "scale": "Elo Rating",
+      "higher_is_better": true
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "provider": "Anthropic",
+  "family": "Claude",
+  "generation": 3,
+  "models": [
+    {
+      "id": "claude-3-5-sonnet",
+      "name": "Claude 3.5 Sonnet",
+      "provider": "Anthropic",
+      "family": "Claude",
+      "pricing": {
+        "input_per_1m_tokens": 3.0,
+        "output_per_1m_tokens": 15.0,
+        "source": {
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {
+        "mmlu": {
+          "score": 88.3,
+          "source": {
+            "url": "https://www.anthropic.com/news/claude-3-5-sonnet",
+            "type": "primary",
+            "collected": "2024-06-20"
+          }
+        },
+        "humaneval": {
+          "score": 92.0,
+          "source": {
+            "url": "https://www.anthropic.com/news/claude-3-5-sonnet",
+            "type": "primary",
+            "collected": "2024-06-20"
+          }
+        }
+      }
+    },
+    {
+      "id": "claude-3-7-sonnet",
+      "name": "Claude 3.7 Sonnet",
+      "provider": "Anthropic",
+      "family": "Claude",
+      "pricing": {
+        "input_per_1m_tokens": 3.0,
+        "output_per_1m_tokens": 15.0,
+        "source": {
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "claude-3-5-haiku",
+      "name": "Claude 3.5 Haiku",
+      "provider": "Anthropic",
+      "family": "Claude",
+      "pricing": {
+        "input_per_1m_tokens": 0.8,
+        "output_per_1m_tokens": 4.0,
+        "source": {
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    }
+  ],
+  "last_updated": "2025-12-31T15:00:00.000000"
+}

@@ -1,0 +1,31 @@
+{
+  "model_files": [
+    "models/anthropic/claude_3.json",
+    "models/anthropic/claude_4_haiku.json",
+    "models/anthropic/claude_4_opus.json",
+    "models/anthropic/claude_4_sonnet.json",
+    "models/deepseek.json",
+    "models/google.json",
+    "models/meta.json",
+    "models/minimax.json",
+    "models/mistral.json",
+    "models/moonshot.json",
+    "models/openai/gpt_3.json",
+    "models/openai/gpt_4.json",
+    "models/openai/gpt_5.1.json",
+    "models/openai/gpt_5_2.json",
+    "models/openai/gpt_5_2_pro.json",
+    "models/openai/gpt_5_2_thinking.json",
+    "models/openai/gpt_5_base.json",
+    "models/openai/gpt_5_mini.json",
+    "models/openai/o_series.json",
+    "models/qwen/qwen3_235b_a22b.json",
+    "models/qwen/qwen3_30b_a3b.json",
+    "models/qwen/qwen3_32b.json",
+    "models/qwen/qwen3_4b.json",
+    "models/qwen.json",
+    "models/xai.json",
+    "models/zhipu.json"
+  ],
+  "last_updated": "2026-01-02T15:30:05.842436"
+}

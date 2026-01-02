@@ -1,0 +1,132 @@
+{
+  "provider": "xAI",
+  "models": [
+    {
+      "id": "grok-4-1-fast-reasoning",
+      "name": "Grok 4.1 Fast Reasoning",
+      "provider": "xAI",
+      "family": "Grok",
+      "pricing": {
+        "input_per_1m_tokens": 0.2,
+        "output_per_1m_tokens": 0.5,
+        "source": {
+          "url": "https://deepmind.google/models/gemini/",
+          "type": "secondary",
+          "collected": "2025-12-31",
+          "notes": "From Google comparison table"
+        }
+      },
+      "benchmarks": {
+        "hle": {
+          "score": 17.6,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "gpqa_diamond": {
+          "score": 84.3,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "aime2025_no_tools": {
+          "score": 91.9,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "mmmu_pro": {
+          "score": 63.0,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "swebench_verified": {
+          "score": 50.6,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "vending_bench_2": {
+          "score": 1107,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "facts_benchmark": {
+          "score": 42.1,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "simpleqa_verified": {
+          "score": 19.5,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "mmmlu": {
+          "score": 86.8,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "global_piqa": {
+          "score": 85.6,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "mrcr_v2_128k": {
+          "score": 54.6,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "mrcr_v2_1m": {
+          "score": 6.1,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        }
+      }
+    }
+  ],
+  "last_updated": "2025-12-31T17:10:36.855683"
+}

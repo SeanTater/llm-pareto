@@ -1,0 +1,310 @@
+{
+  "provider": "OpenAI",
+  "family": "GPT-4",
+  "models": [
+    {
+      "id": "gpt-4-1",
+      "name": "GPT-4.1",
+      "provider": "OpenAI",
+      "family": "GPT-4",
+      "pricing": {
+        "input_per_1m_tokens": 2.0,
+        "output_per_1m_tokens": 8.0,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gpt-4-1-mini",
+      "name": "GPT-4.1 Mini",
+      "provider": "OpenAI",
+      "family": "GPT-4",
+      "pricing": {
+        "input_per_1m_tokens": 0.4,
+        "output_per_1m_tokens": 1.6,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gpt-4o",
+      "pricing": {
+        "input_per_1m_tokens": 2.5,
+        "output_per_1m_tokens": 10.0,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "name": "GPT-4o",
+      "provider": "OpenAI",
+      "family": "GPT-4"
+    },
+    {
+      "id": "gpt-4-1-nano",
+      "name": "GPT-4.1 Nano",
+      "provider": "OpenAI",
+      "family": "GPT-4",
+      "pricing": {
+        "input_per_1m_tokens": 0.1,
+        "output_per_1m_tokens": 0.4,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gpt-4o-2024-05-13",
+      "name": "GPT-4o (2024-05-13)",
+      "provider": "OpenAI",
+      "family": "GPT-4",
+      "pricing": {
+        "input_per_1m_tokens": 5.0,
+        "output_per_1m_tokens": 15.0,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gpt-4o-mini",
+      "name": "GPT-4o Mini",
+      "provider": "OpenAI",
+      "family": "GPT-4",
+      "pricing": {
+        "input_per_1m_tokens": 0.15,
+        "output_per_1m_tokens": 0.6,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gpt-realtime",
+      "name": "GPT Realtime",
+      "provider": "OpenAI",
+      "family": "GPT-4",
+      "pricing": {
+        "input_per_1m_tokens": 4.0,
+        "output_per_1m_tokens": 16.0,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gpt-realtime-mini",
+      "name": "GPT Realtime Mini",
+      "provider": "OpenAI",
+      "family": "GPT-4",
+      "pricing": {
+        "input_per_1m_tokens": 0.6,
+        "output_per_1m_tokens": 2.4,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gpt-4o-realtime-preview",
+      "name": "GPT-4o Realtime Preview",
+      "provider": "OpenAI",
+      "family": "GPT-4",
+      "pricing": {
+        "input_per_1m_tokens": 5.0,
+        "output_per_1m_tokens": 20.0,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gpt-4o-mini-realtime-preview",
+      "name": "GPT-4o Mini Realtime Preview",
+      "provider": "OpenAI",
+      "family": "GPT-4",
+      "pricing": {
+        "input_per_1m_tokens": 0.6,
+        "output_per_1m_tokens": 2.4,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gpt-audio",
+      "name": "GPT Audio",
+      "provider": "OpenAI",
+      "family": "GPT-4",
+      "pricing": {
+        "input_per_1m_tokens": 2.5,
+        "output_per_1m_tokens": 10.0,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gpt-audio-mini",
+      "name": "GPT Audio Mini",
+      "provider": "OpenAI",
+      "family": "GPT-4",
+      "pricing": {
+        "input_per_1m_tokens": 0.6,
+        "output_per_1m_tokens": 2.4,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gpt-4o-audio-preview",
+      "name": "GPT-4o Audio Preview",
+      "provider": "OpenAI",
+      "family": "GPT-4",
+      "pricing": {
+        "input_per_1m_tokens": 2.5,
+        "output_per_1m_tokens": 10.0,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gpt-4o-mini-audio-preview",
+      "name": "GPT-4o Mini Audio Preview",
+      "provider": "OpenAI",
+      "family": "GPT-4",
+      "pricing": {
+        "input_per_1m_tokens": 0.15,
+        "output_per_1m_tokens": 0.6,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gpt-4o-mini-search-preview",
+      "name": "GPT-4o Mini Search Preview",
+      "provider": "OpenAI",
+      "family": "GPT-4",
+      "pricing": {
+        "input_per_1m_tokens": 0.15,
+        "output_per_1m_tokens": 0.6,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gpt-4o-search-preview",
+      "name": "GPT-4o Search Preview",
+      "provider": "OpenAI",
+      "family": "GPT-4",
+      "pricing": {
+        "input_per_1m_tokens": 2.5,
+        "output_per_1m_tokens": 10.0,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "computer-use-preview",
+      "name": "Computer Use Preview",
+      "provider": "OpenAI",
+      "family": "GPT-4",
+      "pricing": {
+        "input_per_1m_tokens": 3.0,
+        "output_per_1m_tokens": 12.0,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gpt-image-1.5",
+      "name": "GPT Image 1.5",
+      "provider": "OpenAI",
+      "family": "GPT-4",
+      "pricing": {
+        "input_per_1m_tokens": 5.0,
+        "output_per_1m_tokens": 10.0,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "chatgpt-image-latest",
+      "name": "ChatGPT Image Latest",
+      "provider": "OpenAI",
+      "family": "GPT-4",
+      "pricing": {
+        "input_per_1m_tokens": 5.0,
+        "output_per_1m_tokens": 10.0,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    }
+  ],
+  "last_updated": "2026-01-01T10:40:20.805232"
+}

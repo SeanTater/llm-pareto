@@ -1,0 +1,96 @@
+{
+  "provider": "Qwen",
+  "family": "Qwen3",
+  "models": [
+    {
+      "id": "qwen3-30b-a3b",
+      "name": "Qwen3-30B-A3B",
+      "provider": "Qwen",
+      "family": "Qwen3",
+      "parameters_billions": 30,
+      "active_parameters_billions": 3,
+      "parameters_source": {
+        "url": "https://qwenlm.github.io/blog/qwen3/",
+        "type": "primary",
+        "collected": "2025-12-31",
+        "notes": "MoE model: 30B total, 3B active"
+      },
+      "benchmarks": {
+        "arenahard": {
+          "score": 91.0,
+          "source": {
+            "url": "https://qwenlm.github.io/blog/qwen3/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "aime24": {
+          "score": 80.4,
+          "source": {
+            "url": "https://qwenlm.github.io/blog/qwen3/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "aime25": {
+          "score": 70.9,
+          "source": {
+            "url": "https://qwenlm.github.io/blog/qwen3/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "livecodebench": {
+          "score": 62.6,
+          "source": {
+            "url": "https://qwenlm.github.io/blog/qwen3/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "codeforces": {
+          "score": 1974,
+          "source": {
+            "url": "https://qwenlm.github.io/blog/qwen3/",
+            "type": "primary",
+            "collected": "2025-12-31",
+            "notes": "Elo rating"
+          }
+        },
+        "gpqa": {
+          "score": 65.8,
+          "source": {
+            "url": "https://qwenlm.github.io/blog/qwen3/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "livebench": {
+          "score": 74.3,
+          "source": {
+            "url": "https://qwenlm.github.io/blog/qwen3/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "bfcl": {
+          "score": 69.1,
+          "source": {
+            "url": "https://qwenlm.github.io/blog/qwen3/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "multiif": {
+          "score": 72.2,
+          "source": {
+            "url": "https://qwenlm.github.io/blog/qwen3/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        }
+      }
+    }
+  ],
+  "last_updated": "2025-12-31T13:07:32.308227"
+}

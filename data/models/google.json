@@ -1,0 +1,976 @@
+{
+  "provider": "Google",
+  "models": [
+    {
+      "id": "gemini-2-0-flash",
+      "name": "Gemini 2.0 Flash",
+      "provider": "Google",
+      "family": "Gemini",
+      "pricing": {
+        "input_per_1m_tokens": 0.1,
+        "output_per_1m_tokens": 0.4,
+        "source": {
+          "url": "https://ai.google.dev/gemini-api/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02",
+          "notes": "Paid tier, text/image/video input."
+        }
+      },
+      "benchmarks": {
+        "mmlu": {
+          "score": 84.2,
+          "source": {
+            "url": "https://blog.google/technology/ai/google-gemini-ai-update-december-2024/",
+            "type": "primary",
+            "collected": "2024-12-11"
+          }
+        }
+      }
+    },
+    {
+      "id": "gemini-2-5-pro",
+      "name": "Gemini 2.5 Pro",
+      "provider": "Google",
+      "family": "Gemini",
+      "benchmarks": {
+        "swebench_verified": {
+          "score": 67.2,
+          "source": {
+            "url": "https://www.anthropic.com/news/claude-opus-4-5",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Anthropic"
+          }
+        },
+        "terminalbench": {
+          "score": 25.3,
+          "source": {
+            "url": "https://www.anthropic.com/news/claude-opus-4-5",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Anthropic"
+          }
+        },
+        "aime2025": {
+          "score": 88.0,
+          "source": {
+            "url": "https://www.anthropic.com/news/claude-opus-4-5",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Anthropic"
+          }
+        },
+        "gpqa_diamond": {
+          "score": 86.4,
+          "source": {
+            "url": "https://www.anthropic.com/news/claude-opus-4-5",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Anthropic"
+          }
+        },
+        "mmmu": {
+          "score": 82.0,
+          "source": {
+            "url": "https://www.anthropic.com/news/claude-opus-4-5",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Anthropic"
+          }
+        },
+        "finance_agent": {
+          "score": 29.4,
+          "source": {
+            "url": "https://www.anthropic.com/news/claude-opus-4-5",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Anthropic"
+          }
+        }
+      },
+      "pricing": {
+        "input_per_1m_tokens": 1.25,
+        "output_per_1m_tokens": 10.0,
+        "source": {
+          "url": "https://ai.google.dev/gemini-api/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02",
+          "notes": "Paid tier, prompts <= 200k tokens."
+        }
+      }
+    },
+    {
+      "id": "gemini-3-flash-thinking"
+    },
+    {
+      "id": "gemini-3-pro-thinking"
+    },
+    {
+      "id": "gemini-2-5-flash-thinking",
+      "name": "Gemini 2.5 Flash Thinking",
+      "provider": "Google",
+      "family": "Gemini",
+      "pricing": {
+        "input_per_1m_tokens": 0.3,
+        "output_per_1m_tokens": 2.5,
+        "source": {
+          "url": "https://ai.google.dev/gemini-api/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {
+        "hle": {
+          "score": 11.0,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "No tools - comparison data from Google"
+          }
+        },
+        "arc_agi_2": {
+          "score": 2.5,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "gpqa_diamond": {
+          "score": 82.8,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "aime2025_no_tools": {
+          "score": 72.0,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "aime2025_with_code": {
+          "score": 75.7,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "mmmu_pro": {
+          "score": 66.7,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "screenspot_pro": {
+          "score": 3.9,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "charxiv_reasoning": {
+          "score": 63.7,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "omnidocbench_1_5": {
+          "score": 0.154,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "videommmu": {
+          "score": 79.2,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "livecodebench_pro": {
+          "score": 1143,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "terminalbench_2_0": {
+          "score": 16.9,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "swebench_verified": {
+          "score": 60.4,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "tau2bench": {
+          "score": 79.5,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "toolathlon": {
+          "score": 3.7,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "scale_mcp_atlas": {
+          "score": 3.4,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "vending_bench_2": {
+          "score": 549,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "facts_benchmark": {
+          "score": 50.4,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "simpleqa_verified": {
+          "score": 28.1,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "mmmlu": {
+          "score": 86.6,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "global_piqa": {
+          "score": 90.2,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "mrcr_v2_128k": {
+          "score": 54.3,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "mrcr_v2_1m": {
+          "score": 21.0,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        }
+      }
+    },
+    {
+      "id": "gemini-2-5-pro-thinking",
+      "name": "Gemini 2.5 Pro Thinking",
+      "provider": "Google",
+      "family": "Gemini",
+      "pricing": {
+        "input_per_1m_tokens": 1.25,
+        "output_per_1m_tokens": 10.0,
+        "source": {
+          "url": "https://ai.google.dev/gemini-api/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {
+        "hle": {
+          "score": 21.6,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "arc_agi_2": {
+          "score": 4.9,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "gpqa_diamond": {
+          "score": 86.4,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "aime2025_no_tools": {
+          "score": 88.0,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "mmmu_pro": {
+          "score": 68.0,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "screenspot_pro": {
+          "score": 11.4,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "charxiv_reasoning": {
+          "score": 69.6,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "omnidocbench_1_5": {
+          "score": 0.145,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "videommmu": {
+          "score": 83.6,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "livecodebench_pro": {
+          "score": 1775,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "terminalbench_2_0": {
+          "score": 32.6,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "swebench_verified": {
+          "score": 59.6,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "tau2bench": {
+          "score": 77.8,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "toolathlon": {
+          "score": 10.5,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "scale_mcp_atlas": {
+          "score": 8.8,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "vending_bench_2": {
+          "score": 574,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "facts_benchmark": {
+          "score": 63.4,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "simpleqa_verified": {
+          "score": 54.5,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "mmmlu": {
+          "score": 89.5,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "global_piqa": {
+          "score": 91.5,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "mrcr_v2_128k": {
+          "score": 58.0,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "mrcr_v2_1m": {
+          "score": 16.4,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        }
+      }
+    },
+    {
+      "id": "gemma-3-4b-base",
+      "name": "Gemma 3 4B Base",
+      "provider": "Google",
+      "family": "Gemma",
+      "benchmarks": {
+        "math_cot_2shot": {
+          "score": 29.4,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        },
+        "mmlu_redux_5shot": {
+          "score": 62.6,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        },
+        "triviaqa_5shot": {
+          "score": 64.0,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        },
+        "mmmlu": {
+          "score": 51.6,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        }
+      }
+    },
+    {
+      "id": "gemma-3-12b-base",
+      "name": "Gemma 3 12B Base",
+      "provider": "Google",
+      "family": "Gemma",
+      "benchmarks": {
+        "math_cot_2shot": {
+          "score": 48.7,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        },
+        "mmlu_redux_5shot": {
+          "score": 76.6,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        },
+        "triviaqa_5shot": {
+          "score": 78.8,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        },
+        "mmmlu": {
+          "score": 69.0,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        }
+      }
+    },
+    {
+      "id": "gemma-3-4b-instruct",
+      "name": "Gemma 3 4B Instruct",
+      "provider": "Google",
+      "family": "Gemma",
+      "benchmarks": {
+        "wildbench": {
+          "score": 49.1,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        },
+        "arenahard": {
+          "score": 31.8,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        },
+        "math_maj_1": {
+          "score": 75.9,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        },
+        "mm_mt_bench": {
+          "score": 52.3,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        },
+        "gpqa_diamond": {
+          "score": 30.0,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Approximate from efficiency chart"
+          }
+        }
+      }
+    },
+    {
+      "id": "gemma-3-12b-instruct",
+      "name": "Gemma 3 12B Instruct",
+      "provider": "Google",
+      "family": "Gemma",
+      "benchmarks": {
+        "wildbench": {
+          "score": 63.2,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        },
+        "arenahard": {
+          "score": 43.6,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        },
+        "math_maj_1": {
+          "score": 85.4,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        },
+        "mm_mt_bench": {
+          "score": 67.0,
+          "source": {
+            "url": "https://mistral.ai/news/mistral-3",
+            "type": "secondary",
+            "collected": "2025-12-31"
+          }
+        }
+      }
+    },
+    {
+      "id": "gemini-3-pro"
+    },
+    {
+      "id": "gemini-3-pro-preview",
+      "name": "Gemini 3 Pro Preview",
+      "provider": "Google",
+      "family": "Gemini",
+      "pricing": {
+        "input_per_1m_tokens": 2.0,
+        "output_per_1m_tokens": 12.0,
+        "source": {
+          "url": "https://ai.google.dev/gemini-api/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02",
+          "notes": "Paid tier, prompts <= 200k tokens."
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gemini-3-flash-preview",
+      "name": "Gemini 3 Flash Preview",
+      "provider": "Google",
+      "family": "Gemini",
+      "pricing": {
+        "input_per_1m_tokens": 0.5,
+        "output_per_1m_tokens": 3.0,
+        "source": {
+          "url": "https://ai.google.dev/gemini-api/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02",
+          "notes": "Paid tier, text/image/video input."
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gemini-3-pro-image-preview",
+      "name": "Gemini 3 Pro Image Preview",
+      "provider": "Google",
+      "family": "Gemini",
+      "pricing": {
+        "input_per_1m_tokens": 2.0,
+        "output_per_1m_tokens": 12.0,
+        "source": {
+          "url": "https://ai.google.dev/gemini-api/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02",
+          "notes": "Text output priced at $12/1M tokens; image output $120/1M tokens."
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gemini-2-5-flash",
+      "name": "Gemini 2.5 Flash",
+      "provider": "Google",
+      "family": "Gemini",
+      "pricing": {
+        "input_per_1m_tokens": 0.3,
+        "output_per_1m_tokens": 2.5,
+        "source": {
+          "url": "https://ai.google.dev/gemini-api/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02",
+          "notes": "Paid tier, text/image/video input."
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gemini-2-5-flash-preview-09-2025",
+      "name": "Gemini 2.5 Flash Preview (09-2025)",
+      "provider": "Google",
+      "family": "Gemini",
+      "pricing": {
+        "input_per_1m_tokens": 0.3,
+        "output_per_1m_tokens": 2.5,
+        "source": {
+          "url": "https://ai.google.dev/gemini-api/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02",
+          "notes": "Paid tier, text/image/video input."
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gemini-2-5-flash-lite",
+      "name": "Gemini 2.5 Flash-Lite",
+      "provider": "Google",
+      "family": "Gemini",
+      "pricing": {
+        "input_per_1m_tokens": 0.1,
+        "output_per_1m_tokens": 0.4,
+        "source": {
+          "url": "https://ai.google.dev/gemini-api/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02",
+          "notes": "Paid tier, text/image/video input."
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gemini-2-5-flash-lite-preview-09-2025",
+      "name": "Gemini 2.5 Flash-Lite Preview (09-2025)",
+      "provider": "Google",
+      "family": "Gemini",
+      "pricing": {
+        "input_per_1m_tokens": 0.1,
+        "output_per_1m_tokens": 0.4,
+        "source": {
+          "url": "https://ai.google.dev/gemini-api/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02",
+          "notes": "Paid tier, text/image/video input."
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gemini-2-5-flash-native-audio-preview-12-2025",
+      "name": "Gemini 2.5 Flash Native Audio Preview (12-2025)",
+      "provider": "Google",
+      "family": "Gemini",
+      "pricing": {
+        "input_per_1m_tokens": 0.5,
+        "output_per_1m_tokens": 2.0,
+        "source": {
+          "url": "https://ai.google.dev/gemini-api/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02",
+          "notes": "Paid tier, text input/output prices."
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gemini-2-5-flash-preview-tts",
+      "name": "Gemini 2.5 Flash Preview TTS",
+      "provider": "Google",
+      "family": "Gemini",
+      "pricing": {
+        "input_per_1m_tokens": 0.5,
+        "output_per_1m_tokens": 10.0,
+        "source": {
+          "url": "https://ai.google.dev/gemini-api/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02",
+          "notes": "Paid tier, text input and audio output."
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gemini-2-5-pro-preview-tts",
+      "name": "Gemini 2.5 Pro Preview TTS",
+      "provider": "Google",
+      "family": "Gemini",
+      "pricing": {
+        "input_per_1m_tokens": 1.0,
+        "output_per_1m_tokens": 20.0,
+        "source": {
+          "url": "https://ai.google.dev/gemini-api/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02",
+          "notes": "Paid tier, text input and audio output."
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gemini-2-0-flash-lite",
+      "name": "Gemini 2.0 Flash-Lite",
+      "provider": "Google",
+      "family": "Gemini",
+      "pricing": {
+        "input_per_1m_tokens": 0.075,
+        "output_per_1m_tokens": 0.3,
+        "source": {
+          "url": "https://ai.google.dev/gemini-api/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02",
+          "notes": "Paid tier, text/image/video input."
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gemini-2-5-computer-use-preview-10-2025",
+      "name": "Gemini 2.5 Computer Use Preview (10-2025)",
+      "provider": "Google",
+      "family": "Gemini",
+      "pricing": {
+        "input_per_1m_tokens": 1.25,
+        "output_per_1m_tokens": 10.0,
+        "source": {
+          "url": "https://ai.google.dev/gemini-api/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02",
+          "notes": "Paid tier, prompts <= 200k tokens."
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gemini-robotics-er-1.5-preview",
+      "name": "Gemini Robotics-ER 1.5 Preview",
+      "provider": "Google",
+      "family": "Gemini",
+      "pricing": {
+        "input_per_1m_tokens": 0.3,
+        "output_per_1m_tokens": 2.5,
+        "source": {
+          "url": "https://ai.google.dev/gemini-api/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02",
+          "notes": "Paid tier, text/image/video input."
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gemini-embedding-001",
+      "name": "Gemini Embedding",
+      "provider": "Google",
+      "family": "Gemini",
+      "pricing": {
+        "input_per_1m_tokens": 0.15,
+        "output_per_1m_tokens": 0.0,
+        "source": {
+          "url": "https://ai.google.dev/gemini-api/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02",
+          "notes": "Input-only pricing; output set to $0.00."
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gemini-2-5-flash-image",
+      "name": "Gemini 2.5 Flash Image",
+      "provider": "Google",
+      "family": "Gemini",
+      "pricing": {
+        "input_per_1m_tokens": 0.3,
+        "output_per_1m_tokens": 30.0,
+        "source": {
+          "url": "https://ai.google.dev/gemini-api/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02",
+          "notes": "Image output priced at $30/1M tokens (1290 tokens per 1K image)."
+        }
+      },
+      "benchmarks": {}
+    }
+  ],
+  "last_updated": "2026-01-01T10:40:51.453812"
+}

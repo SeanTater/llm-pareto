@@ -1,0 +1,329 @@
+{
+  "provider": "OpenAI",
+  "family": "GPT-5",
+  "models": [
+    {
+      "id": "gpt-5-2-thinking",
+      "name": "GPT-5.2 Thinking",
+      "provider": "OpenAI",
+      "family": "GPT-5",
+      "benchmarks": {
+        "gdpval": {
+          "score": 70.9,
+          "source": {
+            "url": "https://openai.com/index/introducing-gpt-5-2/",
+            "type": "primary",
+            "collected": "2025-12-31",
+            "notes": "Wins or ties"
+          }
+        },
+        "swebench_pro_public": {
+          "score": 55.6,
+          "source": {
+            "url": "https://openai.com/index/introducing-gpt-5-2/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "swebench_verified": {
+          "score": 80.0,
+          "source": {
+            "url": "https://openai.com/index/introducing-gpt-5-2/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "gpqa_diamond": {
+          "score": 92.4,
+          "source": {
+            "url": "https://openai.com/index/introducing-gpt-5-2/",
+            "type": "primary",
+            "collected": "2025-12-31",
+            "notes": "No tools"
+          }
+        },
+        "charxiv_reasoning": {
+          "score": 88.7,
+          "source": {
+            "url": "https://openai.com/index/introducing-gpt-5-2/",
+            "type": "primary",
+            "collected": "2025-12-31",
+            "notes": "With Python"
+          }
+        },
+        "aime2025_no_tools": {
+          "score": 100.0,
+          "source": {
+            "url": "https://openai.com/index/introducing-gpt-5-2/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "frontiermath_tier1_3": {
+          "score": 40.3,
+          "source": {
+            "url": "https://openai.com/index/introducing-gpt-5-2/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "frontiermath_tier4": {
+          "score": 14.6,
+          "source": {
+            "url": "https://openai.com/index/introducing-gpt-5-2/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "arc_agi_1": {
+          "score": 86.2,
+          "source": {
+            "url": "https://openai.com/index/introducing-gpt-5-2/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "arc_agi_2": {
+          "score": 52.9,
+          "source": {
+            "url": "https://openai.com/index/introducing-gpt-5-2/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "swe_lancer_ic_diamond": {
+          "score": 38.1,
+          "source": {
+            "url": "https://openai.com/index/introducing-gpt-5-2/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "investment_banking_spreadsheet": {
+          "score": 71.6,
+          "source": {
+            "url": "https://openai.com/index/introducing-gpt-5-2/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "chatgpt_no_errors_with_search": {
+          "score": 50.7,
+          "source": {
+            "url": "https://openai.com/index/introducing-gpt-5-2/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "chatgpt_no_errors_no_search": {
+          "score": 75.1,
+          "source": {
+            "url": "https://openai.com/index/introducing-gpt-5-2/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "openai_mrcr_v2": {
+          "score": 86.8,
+          "source": {
+            "url": "https://openai.com/index/introducing-gpt-5-2/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "browsecomp_long_context_128k": {
+          "score": 21.5,
+          "source": {
+            "url": "https://openai.com/index/introducing-gpt-5-2/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "browsecomp_long_context_256k": {
+          "score": 16.5,
+          "source": {
+            "url": "https://openai.com/index/introducing-gpt-5-2/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "graphwalks_bfs": {
+          "score": 87.9,
+          "source": {
+            "url": "https://openai.com/index/introducing-gpt-5-2/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "graphwalks_parents": {
+          "score": 91.0,
+          "source": {
+            "url": "https://openai.com/index/introducing-gpt-5-2/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "screenspot_pro": {
+          "score": 86.7,
+          "source": {
+            "url": "https://openai.com/index/introducing-gpt-5-2/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "scale_mcp_atlas": {
+          "score": 66.0,
+          "source": {
+            "url": "https://openai.com/index/introducing-gpt-5-2/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "toolathlon": {
+          "score": 56.3,
+          "source": {
+            "url": "https://openai.com/index/introducing-gpt-5-2/",
+            "type": "primary",
+            "collected": "2025-12-31"
+          }
+        },
+        "hle": {
+          "score": 34.5,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "hle_with_tools": {
+          "score": 45.5,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "aime2025_with_code": {
+          "score": 100.0,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google - same as no tools"
+          }
+        },
+        "mmmu_pro": {
+          "score": 79.5,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "omnidocbench_1_5": {
+          "score": 0.143,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "videommmu": {
+          "score": 85.9,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "livecodebench_pro": {
+          "score": 2393,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "tau2bench": {
+          "score": 87.2,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google - likely same as Sonnet 4.5"
+          }
+        },
+        "vending_bench_2": {
+          "score": 3952,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "facts_benchmark": {
+          "score": 61.4,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "simpleqa_verified": {
+          "score": 38.0,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "mmmlu": {
+          "score": 89.6,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "global_piqa": {
+          "score": 91.2,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        },
+        "mrcr_v2_128k": {
+          "score": 81.9,
+          "source": {
+            "url": "https://deepmind.google/models/gemini/",
+            "type": "secondary",
+            "collected": "2025-12-31",
+            "notes": "Comparison data from Google"
+          }
+        }
+      },
+      "pricing": {
+        "input_per_1m_tokens": 1.75,
+        "output_per_1m_tokens": 14.0,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      }
+    }
+  ],
+  "last_updated": "2025-12-31T17:10:02.570749"
+}

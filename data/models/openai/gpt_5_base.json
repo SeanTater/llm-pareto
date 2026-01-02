@@ -1,0 +1,102 @@
+{
+  "provider": "OpenAI",
+  "family": "GPT-5",
+  "models": [
+    {
+      "id": "gpt-5",
+      "pricing": {
+        "input_per_1m_tokens": 1.25,
+        "output_per_1m_tokens": 10.0,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "name": "GPT-5",
+      "provider": "OpenAI",
+      "family": "GPT-5"
+    },
+    {
+      "id": "gpt-5-chat-latest",
+      "name": "GPT-5 Chat Latest",
+      "provider": "OpenAI",
+      "family": "GPT-5",
+      "pricing": {
+        "input_per_1m_tokens": 1.25,
+        "output_per_1m_tokens": 10.0,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gpt-5-codex",
+      "name": "GPT-5 Codex",
+      "provider": "OpenAI",
+      "family": "GPT-5",
+      "pricing": {
+        "input_per_1m_tokens": 1.25,
+        "output_per_1m_tokens": 10.0,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gpt-5-pro",
+      "name": "GPT-5 Pro",
+      "provider": "OpenAI",
+      "family": "GPT-5",
+      "pricing": {
+        "input_per_1m_tokens": 15.0,
+        "output_per_1m_tokens": 120.0,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "codex-mini-latest",
+      "name": "Codex Mini Latest",
+      "provider": "OpenAI",
+      "family": "GPT-5",
+      "pricing": {
+        "input_per_1m_tokens": 1.5,
+        "output_per_1m_tokens": 6.0,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    },
+    {
+      "id": "gpt-5-search-api",
+      "name": "GPT-5 Search API",
+      "provider": "OpenAI",
+      "family": "GPT-5",
+      "pricing": {
+        "input_per_1m_tokens": 1.25,
+        "output_per_1m_tokens": 10.0,
+        "source": {
+          "url": "https://platform.openai.com/docs/pricing",
+          "type": "primary",
+          "collected": "2026-01-02"
+        }
+      },
+      "benchmarks": {}
+    }
+  ],
+  "last_updated": "2026-01-01T10:40:32.567856"
+}
